@@ -1,0 +1,245 @@
+// Imports
+@import "variables";
+
+// Reset on defaults
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Core Elements
+body {
+  background: url("/dist/images/dan-otis-OYFHT4X5isg-unsplash.jpg") no-repeat
+    fixed;
+  background-size: cover;
+  font-family: "EB Garamond", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#bar {
+  height: 2px;
+  width: 5rem;
+  background-color: $light-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+// Main Header
+#header-main {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 90%;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.5;
+    color: #fff;
+
+    .h-tag-1 {
+      color: rgb(252, 244, 0);
+    }
+
+    .h-tag-2 {
+      color: rgb(35, 198, 2);
+    }
+  }
+}
+
+// Main-Nav
+#main-nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  opacity: 0.75;
+
+  h2 {
+    padding-top: 0.5rem;
+    font-size: 1.75rem;
+    margin-left: 5%;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+  }
+
+  li {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    color: rgb(252, 244, 0);
+    text-transform: uppercase;
+  }
+
+  li:hover {
+    cursor: pointer;
+    background-color: $green-shade;
+
+    a {
+      color: $light-color;
+    }
+  }
+}
+
+#main-nav:hover {
+  opacity: 1;
+}
+
+// Section A
+
+#block-a {
+  background-color: rgba(0, 0, 0, 0.2);
+
+  .header-a {
+    text-align: center;
+    background: #333;
+    opacity: 0.9;
+    margin: 0 5%;
+    font-size: 3rem;
+    color: #fff;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0.1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+
+    // LEft Side of the Grid
+    .left-side {
+      background: #333;
+      opacity: 0.9;
+      .rows {
+        background-color: #444;
+        width: 25%;
+        margin: 10px 0;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        transition: all 1s ease;
+      }
+
+      a {
+        color: #fff;
+        display: flex;
+        align-content: center;
+        justify-content: end;
+        transition: all 0.5s ease;
+        visibility: hidden;
+      }
+    }
+
+    // Right Side of the Grid
+    .right-side {
+      text-align: center;
+      background: #333;
+      display: grid;
+      grid-template-areas:
+        "icon1 icon2 icon3"
+        "icon4 icon5 icon6";
+      grid-gap: 0.25rem;
+      opacity: 0.9;
+
+      .item {
+        color: rgb(211, 198, 94);
+        padding: 48px;
+        text-align: center;
+      }
+    }
+  }
+
+  // Hover State to activate Transistions
+  .container:hover {
+    background: #333;
+
+    .right-side {
+      background: #333;
+    }
+
+    .left-side {
+      background: #333;
+
+      .rows {
+        width: 65%;
+        margin-left: 10%;
+        border-radius: 5px;
+      }
+
+      a {
+        visibility: visible;
+        color: Yellow;
+      }
+    }
+  }
+}
+
+// Section C About me Home
+#block-c {
+  background-color: rgba(0, 0, 0, 0.2);
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    height: 50vh;
+    overflow: hidden;
+    opacity: 0.9;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+
+    .home-about {
+      background: rgba(4, 56, 25, 0.762);
+      color: #fff;
+      opacity: 0.9;
+      padding-top: 7.5%;
+
+      p {
+        font-size: 1.75rem;
+      }
+    }
+
+    .btn-box {
+      background: rgba(203, 117, 12, 0.803);
+      padding-top: 25%;
+      .btn {
+        padding: 1rem 3rem;
+        border: none;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+#section-d {
+  background: #333;
+
+  .container {
+    height: 300px;
+
+    p {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}
