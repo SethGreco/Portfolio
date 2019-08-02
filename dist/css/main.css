@@ -3,7 +3,7 @@
   padding: 0; }
 
 body {
-  background: url("/dist/images/dan-otis-OYFHT4X5isg-unsplash.jpg") no-repeat fixed;
+  background: url("../images/dan-otis-OYFHT4X5isg-unsplash.jpg") no-repeat fixed;
   background-size: cover;
   font-family: "EB Garamond", serif; }
 
@@ -158,7 +158,9 @@ ul {
 #section-d {
   background: #333; }
   #section-d .container {
-    height: 300px; }
-    #section-d .container p {
-      color: #fff;
-      font-size: 1.5rem; }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 400px; }
+    #section-d .container .map {
+      width: 50vw;
+      height: 350px; }
