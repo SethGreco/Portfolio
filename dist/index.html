@@ -17,6 +17,7 @@
       src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
       crossorigin
     ></script>
+
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="https://kit.fontawesome.com/c968dabded.js"></script>
     <title>Portfolio | Seth Greco</title>
@@ -110,15 +111,35 @@
       </div>
     </section>
 
-    <!-- Day and Night Time  -->
+    <!-- Vistor Locations & Map Markers  -->
     <section id="section-d">
       <div class="container">
-        <p id="React"></p>
+        <div class="left-side-text">
+          <p class="vistor-text">
+            These are all areas I have had vistors from! Feel free to leave me
+            your coordinates to add a marker to the map. Don't worry I am not
+            taking any other information from you.
+          </p>
+          <p id="React"></p>
+        </div>
         <div class="map"></div>
       </div>
     </section>
 
-    <script src="js/location.js"></script>
+    <!-- Contact me -->
+    <section id="section-e">
+      <div class="container"></div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="container">
+        <h4 class="name">Full-Stack Development...Seth Greco</h4>
+        <h4 class="copyright">2019&copy;</h4>
+      </div>
+    </section>
+
+    <script src="js/location.js" type="text/babel"></script>
     <script src="js/greeting.js"></script>
     <script src="js/map.js"></script>
     <script

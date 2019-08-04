@@ -46,7 +46,7 @@ ul {
   color: #fff;
   justify-content: space-between;
   z-index: 1;
-  opacity: 0.75; }
+  opacity: 1; }
   #main-nav h2 {
     padding-top: 0.5rem;
     font-size: 1.75rem;
@@ -66,9 +66,6 @@ ul {
     background-color: #279303; }
     #main-nav li:hover a {
       color: #f4f4f4; }
-
-#main-nav:hover {
-  opacity: 1; }
 
 #block-a {
   background-color: rgba(0, 0, 0, 0.2); }
@@ -156,11 +153,44 @@ ul {
         border-radius: 2px; }
 
 #section-d {
-  background: #333; }
+  background: #f5f5f5; }
   #section-d .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 400px; }
+    #section-d .container .left-side-text {
+      color: #444;
+      text-align: center; }
+      #section-d .container .left-side-text .vistor-text {
+        font-size: 1.4rem;
+        padding-top: 15%;
+        line-height: 1.8rem;
+        margin-left: 7.5%;
+        margin-right: 7.5%; }
+      #section-d .container .left-side-text #React {
+        padding-top: 5%; }
     #section-d .container .map {
-      width: 50vw;
-      height: 350px; }
+      width: 60vw;
+      height: 400px; }
+
+#section-e .container {
+  background: #a1a1a1;
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 375px;
+  width: 80vw; }
+
+#footer {
+  height: 50px;
+  background: #333; }
+  #footer h4 {
+    color: #fff;
+    font-size: 1.1rem; }
+  #footer .container {
+    display: flex; }
+    #footer .container .name {
+      flex: 1; }
+    #footer .container .copyright {
+      flex: 2;
+      text-align: end; }

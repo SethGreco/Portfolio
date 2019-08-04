@@ -1,6 +1,12 @@
 "use strict";
 
-const e = React.createElement;
+const btnStyle = {
+  background: "#444",
+  color: "#fff",
+  fontSize: "1.3rem",
+  borderRadius: "7px",
+  padding: "15px"
+};
 
 class LikeButton extends React.Component {
   constructor(props) {
@@ -38,16 +44,16 @@ class LikeButton extends React.Component {
       return this.state.lat + ", " + this.state.long;
     }
 
-    return e(
-      "button",
-      { onClick: () => this.postCords() },
-      "Post Your Location!"
+    return (
+      <button style={btnStyle} onClick={() => this.postCords()}>
+        Post Your Coords!
+      </button>
     );
   }
 }
 
 const domContainer = document.querySelector("#React");
-ReactDOM.render(e(LikeButton), domContainer);
+ReactDOM.render(<LikeButton />, domContainer);
 
 // Vanilla JS code that gets location
 // conflicted with my onload
