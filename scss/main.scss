@@ -275,22 +275,53 @@ ul {
 }
 
 #footer {
-  height: 50px;
-  background: #111;
+  background: #222;
+
   h4 {
     color: #fff;
     font-size: 1.1rem;
+    padding: 1.1rem;
+    margin-top: 0.2rem;
+    margin-left: 3.5%;
   }
   .container {
     display: flex;
 
-    .name {
+    .copyright {
       flex: 1;
     }
 
-    .copyright {
+    .item-links {
       flex: 2;
       text-align: end;
+      margin-right: 3.5%;
+      padding: 0.5rem;
+      justify-content: space-between;
+
+      align-items: center;
+
+      a {
+        text-align: center;
+        justify-content: center;
+
+        i {
+          color: #fff;
+          margin-right: 1rem;
+          border: 2px #fff solid;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          line-height: 40px;
+          padding: 0.3rem;
+          transition: all 0.5s;
+
+          &:hover {
+            background: $green-shade;
+            border: 2px #fff dotted;
+            transform: rotateZ(360deg);
+          }
+        }
+      }
     }
   }
 }

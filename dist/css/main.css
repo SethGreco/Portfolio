@@ -182,15 +182,38 @@ ul {
   width: 80vw; }
 
 #footer {
-  height: 50px;
-  background: #333; }
+  background: #222; }
   #footer h4 {
     color: #fff;
-    font-size: 1.1rem; }
+    font-size: 1.1rem;
+    padding: 1.1rem;
+    margin-top: 0.2rem;
+    margin-left: 3.5%; }
   #footer .container {
     display: flex; }
-    #footer .container .name {
-      flex: 1; }
     #footer .container .copyright {
+      flex: 1; }
+    #footer .container .item-links {
       flex: 2;
-      text-align: end; }
+      text-align: end;
+      margin-right: 3.5%;
+      padding: 0.5rem;
+      justify-content: space-between;
+      align-items: center; }
+      #footer .container .item-links a {
+        text-align: center;
+        justify-content: center; }
+        #footer .container .item-links a i {
+          color: #fff;
+          margin-right: 1rem;
+          border: 2px #fff solid;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          line-height: 40px;
+          padding: 0.3rem;
+          transition: all 0.5s; }
+          #footer .container .item-links a i:hover {
+            background: #279303;
+            border: 2px #fff dotted;
+            transform: rotateZ(360deg); }
