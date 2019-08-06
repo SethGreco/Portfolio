@@ -74,16 +74,16 @@ ul {
     text-align: center;
     background: #333;
     opacity: 0.9;
-    margin: 0 5%;
+    margin: 0 0%;
     font-size: 3rem;
-    color: #fff; }
+    color: #fff;
+    height: 10vh; }
   #block-a .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 0.1rem;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%; }
+    margin-bottom: 5%;
+    height: 55vh; }
     #block-a .container .left-side {
       background: #333;
       opacity: 0.9; }
@@ -154,11 +154,12 @@ ul {
         border-radius: 2px; }
 
 #section-d {
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  height: 65vh;
+  margin-bottom: 5%; }
   #section-d .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 400px; }
+    grid-template-columns: repeat(2, 1fr); }
     #section-d .container .left-side-text {
       color: #444;
       text-align: center; }
@@ -172,22 +173,54 @@ ul {
         padding-top: 5%; }
     #section-d .container .map {
       width: 60vw;
-      height: 400px; }
+      height: 65vh; }
 
-#section-e .container {
-  background: #032e20;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  height: 375px;
-  width: 100vw;
-  display: flex; }
-  #section-e .container form {
-    flex: 1.75;
-    display: flex; }
-    #section-e .container form .left-side-form div {
-      padding: 1.1rem; }
-  #section-e .container .my-img {
-    flex: 1.25; }
+#section-e {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 65vh;
+  margin-bottom: 5%; }
+  #section-e .container {
+    background: #032e20;
+    display: flex;
+    height: inherit; }
+    #section-e .container form {
+      display: flex;
+      width: 55%;
+      color: #f5d00c;
+      font-size: 1.1rem;
+      font-weight: bold; }
+      #section-e .container form .left-side-form div {
+        padding: 1.1rem; }
+      #section-e .container form .left-side-form .contact-me-title {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px; }
+      #section-e .container form .left-side-form label {
+        display: block;
+        padding-bottom: 0.5rem; }
+      #section-e .container form .left-side-form input {
+        height: 1.3rem;
+        width: 200px;
+        border-radius: 3px;
+        border: 1px #a34201 solid; }
+      #section-e .container form .left-side-form button {
+        margin-top: 0.8rem;
+        margin-left: 4rem;
+        height: 2.2rem;
+        width: 6rem;
+        border: 1px #a34201 solid;
+        border-radius: 5px; }
+      #section-e .container form .subject {
+        padding-left: 2rem; }
+        #section-e .container form .subject label {
+          display: block;
+          padding-top: 4.05rem; }
+        #section-e .container form .subject textarea {
+          margin-top: 0.52rem;
+          border: 1px #a34201 solid;
+          border-radius: 3px; }
+    #section-e .container img {
+      width: 45%; }
 
 #footer {
   background: #222; }
