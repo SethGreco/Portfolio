@@ -4,8 +4,7 @@
 
 body {
   background: url("../images/dan-otis-OYFHT4X5isg-unsplash.jpg") no-repeat fixed;
-  background-size: cover;
-  font-family: "EB Garamond", serif; }
+  background-size: cover; }
 
 a {
   text-decoration: none; }
@@ -22,7 +21,8 @@ ul {
 
 #header-main {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: "EB Garamond", serif; }
   #header-main .container {
     display: flex;
     flex-direction: column;
@@ -36,17 +36,18 @@ ul {
     #header-main h1 .h-tag-1 {
       color: #fcf400; }
     #header-main h1 .h-tag-2 {
-      color: #23c602; }
+      color: #228b22; }
 
 #main-nav {
   display: flex;
   position: sticky;
   top: 0;
-  background: #333;
+  background: #222;
   color: #fff;
   justify-content: space-between;
   z-index: 1;
-  opacity: 1; }
+  opacity: 1;
+  font-family: "Open Sans", sans-serif; }
   #main-nav h2 {
     padding-top: 0.5rem;
     font-size: 1.75rem;
@@ -59,11 +60,11 @@ ul {
     display: inline-block;
     padding: 1rem 1.5rem; }
   #main-nav a {
-    color: #fcf400;
+    color: #f5d00c;
     text-transform: uppercase; }
   #main-nav li:hover {
     cursor: pointer;
-    background-color: #279303; }
+    background-color: #228b22; }
     #main-nav li:hover a {
       color: #f4f4f4; }
 
@@ -123,7 +124,7 @@ ul {
         border-radius: 5px; }
       #block-a .container:hover .left-side a {
         visibility: visible;
-        color: Yellow; }
+        color: #f5d00c; }
 
 #block-c {
   background-color: rgba(0, 0, 0, 0.2); }
@@ -174,12 +175,19 @@ ul {
       height: 400px; }
 
 #section-e .container {
-  background: #a1a1a1;
-  margin-left: 10%;
+  background: #032e20;
   margin-top: 5%;
   margin-bottom: 5%;
   height: 375px;
-  width: 80vw; }
+  width: 100vw;
+  display: flex; }
+  #section-e .container form {
+    flex: 1.75;
+    display: flex; }
+    #section-e .container form .left-side-form div {
+      padding: 1.1rem; }
+  #section-e .container .my-img {
+    flex: 1.25; }
 
 #footer {
   background: #222; }
@@ -214,6 +222,6 @@ ul {
           padding: 0.3rem;
           transition: all 0.5s; }
           #footer .container .item-links a i:hover {
-            background: #279303;
-            border: 2px #fff dotted;
+            background: #228b22;
+            border: 2px #f5d00c dotted;
             transform: rotateZ(360deg); }

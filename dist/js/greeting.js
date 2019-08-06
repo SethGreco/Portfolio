@@ -1,3 +1,5 @@
+// Vanilla Javascript to grab users time and display a greeting
+
 var y = document.getElementById("time-stamp");
 z = new Date();
 
