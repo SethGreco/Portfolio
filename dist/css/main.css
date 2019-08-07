@@ -69,24 +69,23 @@ ul {
       color: #f4f4f4; }
 
 #block-a {
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0% 2% 7.5% 2%; }
   #block-a .header-a {
     text-align: center;
     background: #333;
-    opacity: 0.9;
-    margin: 0 0%;
+    opacity: 1;
     font-size: 3rem;
     color: #fff;
-    height: 10vh; }
+    height: 7.5vh; }
   #block-a .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 0.1rem;
-    margin-bottom: 5%;
-    height: 55vh; }
+    height: 52.5vh; }
     #block-a .container .left-side {
       background: #333;
-      opacity: 0.9; }
+      opacity: 1; }
       #block-a .container .left-side .rows {
         background-color: #444;
         width: 25%;
@@ -107,10 +106,10 @@ ul {
       display: grid;
       grid-template-areas: "icon1 icon2 icon3" "icon4 icon5 icon6";
       grid-gap: 0.25rem;
-      opacity: 0.9; }
+      opacity: 1; }
       #block-a .container .right-side .item {
-        color: #d3c65e;
-        padding: 48px;
+        color: #f5d00c;
+        padding: 2rem;
         text-align: center; }
   #block-a .container:hover {
     background: #333; }
@@ -127,38 +126,45 @@ ul {
         color: #f5d00c; }
 
 #block-c {
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0% 2% 7.5% 2%; }
   #block-c .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
     height: 50vh;
-    overflow: hidden;
-    opacity: 0.9;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 10%; }
+    width: 50vw;
+    overflow: hidden; }
     #block-c .container .home-about {
-      background: rgba(4, 56, 25, 0.762);
-      color: #fff;
-      opacity: 0.9;
-      padding-top: 7.5%; }
-      #block-c .container .home-about p {
-        font-size: 1.75rem; }
+      background: #f4f4f4;
+      color: #222;
+      border-radius: 50% 0 0 50%;
+      padding-top: 7.5%;
+      line-height: 3.5rem; }
+      #block-c .container .home-about h1 {
+        font-size: 3rem; }
+      #block-c .container .home-about h2 {
+        font-size: 2.5rem; }
+      #block-c .container .home-about h3 {
+        font-size: 2rem; }
+      #block-c .container .home-about h4 {
+        font-size: 1.5rem; }
     #block-c .container .btn-box {
-      background: rgba(203, 117, 12, 0.803);
-      padding-top: 25%; }
+      background: #f4f4f4;
+      padding-top: 25%;
+      border-radius: 0 50% 50% 0; }
       #block-c .container .btn-box .btn {
         padding: 1rem 3rem;
         border: none;
         border-radius: 2px; }
 
 #section-d {
-  background: #f5f5f5;
-  height: 65vh;
-  margin-bottom: 5%; }
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 60vh;
+  padding: 0% 2% 7.5% 2%; }
   #section-d .container {
     display: grid;
+    background: #f5f5f5;
     grid-template-columns: repeat(2, 1fr); }
     #section-d .container .left-side-text {
       color: #444;
@@ -173,12 +179,12 @@ ul {
         padding-top: 5%; }
     #section-d .container .map {
       width: 60vw;
-      height: 65vh; }
+      height: 60vh; }
 
 #section-e {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 65vh;
-  margin-bottom: 5%; }
+  height: 60vh;
+  padding: 0% 2% 7.5% 2%; }
   #section-e .container {
     background: #032e20;
     display: flex;
@@ -189,34 +195,37 @@ ul {
       color: #f5d00c;
       font-size: 1.1rem;
       font-weight: bold; }
-      #section-e .container form .left-side-form div {
-        padding: 1.1rem; }
-      #section-e .container form .left-side-form .contact-me-title {
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-bottom: 10px; }
-      #section-e .container form .left-side-form label {
-        display: block;
-        padding-bottom: 0.5rem; }
-      #section-e .container form .left-side-form input {
-        height: 1.3rem;
-        width: 200px;
-        border-radius: 3px;
-        border: 1px #a34201 solid; }
-      #section-e .container form .left-side-form button {
-        margin-top: 0.8rem;
-        margin-left: 4rem;
-        height: 2.2rem;
-        width: 6rem;
-        border: 1px #a34201 solid;
-        border-radius: 5px; }
+      #section-e .container form .left-side-form {
+        flex: 1.5; }
+        #section-e .container form .left-side-form div {
+          padding: 1.1rem; }
+        #section-e .container form .left-side-form .contact-me-title {
+          padding-top: 1rem;
+          padding-left: 1rem;
+          padding-bottom: 1rem; }
+        #section-e .container form .left-side-form label {
+          display: block;
+          padding-bottom: 0.5rem; }
+        #section-e .container form .left-side-form input {
+          height: 1.3rem;
+          width: 15rem;
+          border-radius: 3px;
+          border: 1px #a34201 solid; }
+        #section-e .container form .left-side-form button {
+          margin-top: 0.8rem;
+          margin-left: 4rem;
+          height: 2.2rem;
+          width: 6rem;
+          border: 1px #a34201 solid;
+          border-radius: 5px; }
       #section-e .container form .subject {
-        padding-left: 2rem; }
+        flex: 1.5; }
         #section-e .container form .subject label {
           display: block;
           padding-top: 4.05rem; }
         #section-e .container form .subject textarea {
           margin-top: 0.52rem;
+          width: 85%;
           border: 1px #a34201 solid;
           border-radius: 3px; }
     #section-e .container img {
