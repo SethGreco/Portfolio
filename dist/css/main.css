@@ -130,17 +130,43 @@ ul {
   padding: 0% 2% 7.5% 2%; }
   #block-c .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-    height: 50vh;
-    width: 50vw;
-    overflow: hidden; }
+    grid-template-areas: "home-about description" "line-1 line-2" "line-3 line-4" "line-5 line-6" "line-7 line-8" "line-9 line-10" "line-11 line-12" "line-13 line-14" "line-15 line-16"; }
+    #block-c .container .lines {
+      margin: 0 0;
+      padding: 0 0;
+      height: 100%;
+      background: #fff; }
+    #block-c .container .odd,
+    #block-c .container .even {
+      height: 2vh; }
+    #block-c .container .line-1,
+    #block-c .container .line-5,
+    #block-c .container .line-9,
+    #block-c .container .line-13,
+    #block-c .container .line-4,
+    #block-c .container .line-8,
+    #block-c .container .line-12 {
+      background-color: transparent; }
+    #block-c .container .line-3,
+    #block-c .container .line-7,
+    #block-c .container .line-11,
+    #block-c .container .line-15 {
+      background-color: #f4f4f4; }
+    #block-c .container .line-2,
+    #block-c .container .line-6,
+    #block-c .container .line-10,
+    #block-c .container .line-14 {
+      background-color: #c99d63; }
+    #block-c .container .line-15 {
+      height: 10vh;
+      background-color: #f4f4f4;
+      border-radius: 0 0 0 50%; }
     #block-c .container .home-about {
       background: #f4f4f4;
       color: #222;
-      border-radius: 50% 0 0 50%;
-      padding-top: 7.5%;
-      line-height: 3.5rem; }
+      height: 50vh;
+      line-height: 3rem;
+      text-align: center; }
       #block-c .container .home-about h1 {
         font-size: 3rem; }
       #block-c .container .home-about h2 {
@@ -149,14 +175,12 @@ ul {
         font-size: 2rem; }
       #block-c .container .home-about h4 {
         font-size: 1.5rem; }
-    #block-c .container .btn-box {
-      background: #f4f4f4;
-      padding-top: 25%;
-      border-radius: 0 50% 50% 0; }
-      #block-c .container .btn-box .btn {
-        padding: 1rem 3rem;
-        border: none;
-        border-radius: 2px; }
+    #block-c .container .description {
+      height: 50vh;
+      background: #c99d63;
+      color: #f4f4f4;
+      font-size: 1.6rem;
+      border-radius: 0 10% 10% 0; }
 
 #section-d {
   background-color: rgba(0, 0, 0, 0.2);

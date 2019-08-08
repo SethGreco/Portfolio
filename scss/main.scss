@@ -199,18 +199,66 @@ ul {
   padding: 0% 2% 7.5% 2%;
   .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-    height: 50vh;
-    width: 50vw;
-    overflow: hidden;
+    grid-template-areas:
+      "home-about description"
+      "line-1 line-2"
+      "line-3 line-4"
+      "line-5 line-6"
+      "line-7 line-8"
+      "line-9 line-10"
+      "line-11 line-12"
+      "line-13 line-14"
+      "line-15 line-16";
+
+    .lines {
+      margin: 0 0;
+      padding: 0 0;
+      height: 100%;
+      background: #fff;
+    }
+
+    .odd,
+    .even {
+      height: 2vh;
+    }
+
+    .line-1,
+    .line-5,
+    .line-9,
+    .line-13,
+    .line-4,
+    .line-8,
+    .line-12 {
+      background-color: transparent;
+    }
+
+    .line-3,
+    .line-7,
+    .line-11,
+    .line-15 {
+      background-color: $light-color;
+    }
+
+    .line-2,
+    .line-6,
+    .line-10,
+    .line-14 {
+      background-color: $tan;
+    }
+
+    .line-15 {
+      height: 10vh;
+      background-color: $light-color;
+      border-radius: 0 0 0 50%;
+    }
 
     .home-about {
       background: $light-color;
       color: $dark-color;
-      border-radius: 50% 0 0 50%;
-      padding-top: 7.5%;
-      line-height: 3.5rem;
+      height: 50vh;
+
+      line-height: 3rem;
+      text-align: center;
 
       h1 {
         font-size: 3rem;
@@ -229,15 +277,13 @@ ul {
       }
     }
 
-    .btn-box {
-      background: $light-color;
-      padding-top: 25%;
-      border-radius: 0 50% 50% 0;
-      .btn {
-        padding: 1rem 3rem;
-        border: none;
-        border-radius: 2px;
-      }
+    .description {
+      height: 50vh;
+      background: $tan;
+      color: $light-color;
+      font-size: 1.6rem;
+
+      border-radius: 0 10% 10% 0;
     }
   }
 }

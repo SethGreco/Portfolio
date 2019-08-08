@@ -56,10 +56,6 @@ router.route("/get").get(function(req, res) {
   });
 });
 
-router.get("/about", function(req, res) {
-  res.sendFile(path.join(__dirname + "/dist/about.html"));
-});
-
 // 404 handles
 router.get("*", function(req, res) {
   res.sendFile(path.join(__dirname + "/dist/404.html"));
