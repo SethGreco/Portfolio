@@ -106,10 +106,6 @@ ul {
   }
 }
 
-// #main-nav:hover {
-//   opacity: 1;
-// }
-
 // Section A
 
 #block-a {
@@ -117,7 +113,7 @@ ul {
   padding: 0% 2% 7.5% 2%;
   .header-a {
     text-align: center;
-    background: #333;
+    background: $dark-color;
     opacity: 1;
 
     font-size: 3rem;
@@ -126,20 +122,21 @@ ul {
   }
   .container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 0.1rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 0.5rem;
 
-    height: 52.5vh;
+    height: 60vh;
 
     // LEft Side of the Grid
     .left-side {
-      background: #333;
+      background: $dark-color;
       opacity: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       .rows {
         background-color: #444;
         width: 25%;
-        margin: 10px 0;
-        padding: 0.5rem;
         font-size: 1.5rem;
         transition: all 1s ease;
       }
@@ -154,36 +151,54 @@ ul {
       }
     }
 
-    // Right Side of the Grid
-    .right-side {
+    .middle {
+      background-color: transparent;
       text-align: center;
-      background: #333;
       display: grid;
       grid-template-areas:
-        "icon1 icon2 icon3"
-        "icon4 icon5 icon6";
+        "icon1 icon2"
+        "icon3 icon4"
+        "icon5 icon6"
+        "icon7 icon8";
       grid-gap: 0.25rem;
       opacity: 1;
 
       .item {
         color: $gold;
-        padding: 2rem;
+        border: 3px #333 solid;
+        padding: 10% 5% 0% 5%;
         text-align: center;
+      }
+    }
+    // Right Side of the Grid
+    .right-side {
+      background: $dark-color;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .rows {
+        background-color: #444;
+
+        font-size: 1.5rem;
+        transition: all 1s ease;
+      }
+
+      a {
+        color: #fff;
+        display: flex;
+        align-content: center;
+
+        transition: all 0.5s ease;
+        // visibility: hidden;
       }
     }
   }
 
   // Hover State to activate Transistions
   .container:hover {
-    background: #333;
-
-    .right-side {
-      background: #333;
-    }
-
     .left-side {
-      background: #333;
-
       .rows {
         width: 65%;
         margin-left: 10%;
@@ -203,20 +218,14 @@ ul {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0% 2% 7.5% 2%;
   .container {
-    width: 96vw;
     display: grid;
-    grid-template-areas:
-      "home-about description"
-      "line-1 line-2"
-      "line-3 line-4"
-      "line-5 line-6"
-      "line-7 line-8"
-      "line-9 line-10"
-      "line-11 line-12"
-      "line-13 line-14"
-      "line-15 line-16";
+    grid-template-columns: repeat(2, 1fr);
 
     grid-column-gap: 1vw;
+
+    .sec {
+      position: relative;
+    }
 
     .lines {
       margin: 0 0;
@@ -257,6 +266,7 @@ ul {
     .line-11,
     .line-15 {
       background-color: $light-color;
+      transition: all 1s ease-in-out;
     }
 
     .line-2,
@@ -264,6 +274,7 @@ ul {
     .line-10,
     .line-14 {
       background-color: $tan;
+      transition: all 1s ease-in-out;
     }
 
     .line-15 {
@@ -278,7 +289,7 @@ ul {
       background: $light-color;
       color: $dark-color;
       height: 50vh;
-      width: 47.5vw;
+
       line-height: 3rem;
       text-align: center;
       padding-top: 10%;
@@ -286,6 +297,7 @@ ul {
 
       h1 {
         padding-top: 10%;
+
         font-size: 3rem;
       }
 
@@ -304,7 +316,7 @@ ul {
 
     .description {
       height: 50vh;
-      width: 47.5vw;
+
       text-align: center;
       background: $tan;
       color: $light-color;
@@ -316,6 +328,22 @@ ul {
       .summary {
         padding-top: 10%;
       }
+    }
+  }
+
+  &:hover {
+    .line-2,
+    .line-6,
+    .line-10,
+    .line-14 {
+      transform: translateX(-102.05%);
+    }
+
+    .line-3,
+    .line-7,
+    .line-11,
+    .line-15 {
+      transform: translateX(102%);
     }
   }
 }
@@ -488,3 +516,6 @@ ul {
     }
   }
 }
+
+// Import Media Queries
+@import "media";

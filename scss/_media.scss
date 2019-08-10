@@ -1,0 +1,87 @@
+// Tablet format
+@media (max-width: 800px) {
+}
+
+// Smartphone format
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header-main {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  #block-c {
+    padding: 0 0 5% 0;
+
+    .container .home-about,
+    .container .description {
+      border-radius: 0;
+    }
+  }
+
+  #block-a {
+    padding: 0 0 5% 0;
+
+    .header-a {
+      font-size: 2rem;
+    }
+    .container {
+      height: 50vh;
+    }
+    .container .left-side .rows {
+      font-size: 1rem;
+    }
+  }
+
+  #section-d {
+    padding: 0 0 5% 0;
+  }
+
+  #section-e {
+    padding: 0 0 5% 0;
+
+    .container {
+      form {
+        .left-side-form {
+        }
+        .subject {
+          textarea {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .container img {
+      width: 0%;
+    }
+  }
+}
+
+// Landscapes
+@media (max-height: 580px) {
+}
+
+@media (max-height: 330px) {
+}
+
+@media (min-width: 1900px) {
+  #block-a {
+    padding: 0 5% 7.5% 5%;
+  }
+
+  #block-c {
+    padding: 0 5% 7.5% 5%;
+  }
+  #section-d {
+    padding: 0 5% 7.5% 5%;
+  }
+
+  #section-e {
+    padding: 0 5% 7.5% 5%;
+  }
+}
