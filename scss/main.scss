@@ -68,7 +68,7 @@ ul {
   z-index: 1;
   opacity: 1;
   font-family: "Open Sans", sans-serif;
-
+  font-weight: bold;
   #time-stamp {
     color: $cream;
   }
@@ -113,11 +113,11 @@ ul {
   padding: 0% 2% 7.5% 2%;
   .header-a {
     text-align: center;
-    background: $dark-color;
+    background: transparent;
     opacity: 1;
 
-    font-size: 3rem;
-    color: #fff;
+    font-size: 2.75rem;
+    color: #ddd;
     height: 7.5vh;
   }
   .container {
@@ -130,23 +130,27 @@ ul {
     // LEft Side of the Grid
     .left-side {
       background: $dark-color;
-      opacity: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      transition: all 0.5s ease;
+
       .rows {
         background-color: #444;
+
         width: 25%;
         font-size: 1.5rem;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
       }
 
       a {
-        color: #fff;
+        font-family: "EB Garamond", serif;
+        color: $gold;
+        padding-right: 5%;
         display: flex;
         align-content: center;
         justify-content: end;
-        transition: all 0.5s ease;
+        transition: all 0.2s ease;
         visibility: hidden;
       }
     }
@@ -161,37 +165,38 @@ ul {
         "icon5 icon6"
         "icon7 icon8";
       grid-gap: 0.25rem;
-      opacity: 1;
 
       .item {
         color: $gold;
-        border: 3px #333 solid;
         padding: 10% 5% 0% 5%;
         text-align: center;
+        opacity: 0.4;
+        transition: all 0.5s ease;
       }
     }
     // Right Side of the Grid
     .right-side {
       background: $dark-color;
-      opacity: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
 
       .rows {
         background-color: #444;
-
+        width: 25%;
         font-size: 1.5rem;
-        transition: all 1s ease;
+        margin-left: 75%;
+        transition: all 0.5s ease;
       }
 
       a {
-        color: #fff;
+        font-family: "EB Garamond", serif;
+        padding-left: 5%;
+        color: $gold;
         display: flex;
         align-content: center;
-
-        transition: all 0.5s ease;
-        // visibility: hidden;
+        transition: all 0.2s ease;
+        visibility: hidden;
       }
     }
   }
@@ -200,9 +205,35 @@ ul {
   .container:hover {
     .left-side {
       .rows {
-        width: 65%;
+        transform: rotateX(360deg);
+        width: 75%;
         margin-left: 10%;
+        padding: 5px 0 5px 0;
         border-radius: 5px;
+        font-size: 1.8rem;
+      }
+
+      a {
+        visibility: visible;
+        color: $gold;
+      }
+    }
+
+    .middle {
+      .item {
+        border: 3px $cream solid;
+        opacity: 1;
+      }
+    }
+
+    .right-side {
+      .rows {
+        transform: rotateX(360deg);
+        width: 75%;
+        margin-left: 15%;
+        padding: 5px 0 5px 0;
+        border-radius: 5px;
+        font-size: 1.8rem;
       }
 
       a {
@@ -470,9 +501,9 @@ ul {
 
   h4 {
     color: #fff;
-    font-size: 1.1rem;
-    padding: 1.1rem;
-    margin-top: 0.2rem;
+    font-size: 1.2rem;
+    padding-left: 1%;
+    padding-top: 1.75%;
     margin-left: 3.5%;
   }
   .container {
@@ -486,6 +517,7 @@ ul {
       flex: 2;
       text-align: end;
       margin-right: 3.5%;
+
       padding: 0.5rem;
       justify-content: space-between;
 

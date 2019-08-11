@@ -47,7 +47,8 @@ ul {
   justify-content: space-between;
   z-index: 1;
   opacity: 1;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold; }
   #main-nav #time-stamp {
     color: #fcf1b3; }
   #main-nav h2 {
@@ -77,10 +78,10 @@ ul {
   padding: 0% 2% 7.5% 2%; }
   #block-a .header-a {
     text-align: center;
-    background: #222;
+    background: transparent;
     opacity: 1;
-    font-size: 3rem;
-    color: #fff;
+    font-size: 2.75rem;
+    color: #ddd;
     height: 7.5vh; }
   #block-a .container {
     display: grid;
@@ -89,54 +90,76 @@ ul {
     height: 60vh; }
     #block-a .container .left-side {
       background: #222;
-      opacity: 1;
       display: flex;
       flex-direction: column;
-      justify-content: space-around; }
+      justify-content: space-around;
+      transition: all 0.5s ease; }
       #block-a .container .left-side .rows {
         background-color: #444;
         width: 25%;
         font-size: 1.5rem;
-        transition: all 1s ease; }
+        transition: all 0.5s ease; }
       #block-a .container .left-side a {
-        color: #fff;
+        font-family: "EB Garamond", serif;
+        color: #f5d00c;
+        padding-right: 5%;
         display: flex;
         align-content: center;
         justify-content: end;
-        transition: all 0.5s ease;
+        transition: all 0.2s ease;
         visibility: hidden; }
     #block-a .container .middle {
       background-color: transparent;
       text-align: center;
       display: grid;
       grid-template-areas: "icon1 icon2" "icon3 icon4" "icon5 icon6" "icon7 icon8";
-      grid-gap: 0.25rem;
-      opacity: 1; }
+      grid-gap: 0.25rem; }
       #block-a .container .middle .item {
         color: #f5d00c;
-        border: 3px #333 solid;
         padding: 10% 5% 0% 5%;
-        text-align: center; }
+        text-align: center;
+        opacity: 0.4;
+        transition: all 0.5s ease; }
     #block-a .container .right-side {
       background: #222;
-      opacity: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
       #block-a .container .right-side .rows {
         background-color: #444;
+        width: 25%;
         font-size: 1.5rem;
-        transition: all 1s ease; }
+        margin-left: 75%;
+        transition: all 0.5s ease; }
       #block-a .container .right-side a {
-        color: #fff;
+        font-family: "EB Garamond", serif;
+        padding-left: 5%;
+        color: #f5d00c;
         display: flex;
         align-content: center;
-        transition: all 0.5s ease; }
+        transition: all 0.2s ease;
+        visibility: hidden; }
   #block-a .container:hover .left-side .rows {
-    width: 65%;
+    transform: rotateX(360deg);
+    width: 75%;
     margin-left: 10%;
-    border-radius: 5px; }
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+    font-size: 1.8rem; }
   #block-a .container:hover .left-side a {
+    visibility: visible;
+    color: #f5d00c; }
+  #block-a .container:hover .middle .item {
+    border: 3px #fcf1b3 solid;
+    opacity: 1; }
+  #block-a .container:hover .right-side .rows {
+    transform: rotateX(360deg);
+    width: 75%;
+    margin-left: 15%;
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+    font-size: 1.8rem; }
+  #block-a .container:hover .right-side a {
     visibility: visible;
     color: #f5d00c; }
 
@@ -305,9 +328,9 @@ ul {
   background: #222; }
   #footer h4 {
     color: #fff;
-    font-size: 1.1rem;
-    padding: 1.1rem;
-    margin-top: 0.2rem;
+    font-size: 1.2rem;
+    padding-left: 1%;
+    padding-top: 1.75%;
     margin-left: 3.5%; }
   #footer .container {
     display: flex; }
