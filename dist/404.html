@@ -5,35 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap"
+      href="https://fonts.googleapis.com/css?family=EB+Garamond:400|Open+Sans:400,700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/c968dabded.js"></script>
+    <link rel="stylesheet" href="css/404.css" />
     <title>Missing Page</title>
-    <style>
-      body {
-        background: url("images/lachlan-donald-eaTHXNIUsYM-unsplash.jpg")
-          no-repeat fixed;
-        background-size: cover;
-      }
-
-      #title {
-        color: #e4bf6f;
-        font-size: 2.7rem;
-        text-decoration: underline;
-      }
-      .msg {
-        color: #fff;
-        font-size: 3rem;
-        text-align: center;
-        padding-top: 500px;
-      }
-    </style>
   </head>
   <body>
-    <div class="container">
-      <h1 id="title">404: Page Not found</h1>
-      <p class="msg">Oops!! We couldn't find the page you were looking for</p>
-    </div>
+    <section id="page-missing">
+      <div class="container">
+        <div class="usr-msg">
+          <h1 id="title">404: Oops, Sorry!</h1>
+          <p class="msg">
+            Looks like a dead end.<br />
+            You may want to turn around.
+          </p>
+
+          <a href="http://localhost:3000"
+            >Return Home<i class="arrow right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

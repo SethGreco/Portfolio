@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: linear-gradient(rgba(79, 79, 79, 0.6), rgba(79, 79, 79, 0.6)), url("../images/andrew-neel-aebPbwAWjDs-unsplash.jpg") center center fixed;
+  background-size: cover;
+  font-family: "EB Garamond", serif; }
+
+#page-missing .container .usr-msg {
+  text-align: center;
+  padding-top: 15%; }
+  #page-missing .container .usr-msg h1 {
+    font-size: 2rem;
+    color: #f5d00c; }
+  #page-missing .container .usr-msg p {
+    font-size: 1.3rem;
+    color: #d3d3d3;
+    margin-bottom: 2%; }
+  #page-missing .container .usr-msg i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 0.5%; }
+  #page-missing .container .usr-msg .right {
+    transform: rotate(-45deg); }
+  #page-missing .container .usr-msg a {
+    border-radius: 5px;
+    color: #000000;
+    height: 2.5rem;
+    text-decoration: none;
+    opacity: 0.5; }
