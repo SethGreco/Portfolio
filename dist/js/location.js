@@ -1,10 +1,11 @@
 "use strict";
 
 const btnStyle = {
-  background: "#444",
-  color: "#fff",
+  background: "#555",
+  color: "#f5d00c",
   fontSize: "1.3rem",
-  borderRadius: "7px",
+  border: "1px #ccc solid",
+  borderRadius: "5px",
   padding: "15px"
 };
 
