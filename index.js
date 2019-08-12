@@ -33,6 +33,10 @@ router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
 
+router.get("/projects", function(req, res) {
+  res.sendFile(path.join(__dirname + "/dist/under_construction.html"));
+});
+
 router.route("/add").post(function(req, res) {
   let location = new Cords(req.body);
   location
