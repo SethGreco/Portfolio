@@ -40,6 +40,30 @@ ul {
     text-align: center;
     justify-content: center;
     height: 90%;
+
+    .item-links {
+      a {
+        text-align: center;
+
+        i {
+          color: #fff;
+          margin-right: 1rem;
+          border: 1px #fff solid;
+          border-radius: 50%;
+          height: 25px;
+          width: 25px;
+          line-height: 25px;
+          padding: 0.3rem;
+          transition: all 0.5s;
+
+          &:hover {
+            background: $forest-green;
+            border: 1px $gold solid;
+            transform: rotateZ(360deg);
+          }
+        }
+      }
+    }
   }
 
   h1 {
@@ -106,146 +130,8 @@ ul {
   }
 }
 
-// Section A
-
+// Section A About me
 #block-a {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 0% 2% 7.5% 2%;
-  .header-a {
-    text-align: center;
-    background: transparent;
-    opacity: 1;
-
-    font-size: 2.75rem;
-    color: #ddd;
-    height: 7.5vh;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 0.5rem;
-
-    height: 60vh;
-
-    // LEft Side of the Grid
-    .left-side {
-      background: $dark-color-T;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      transition: all 0.5s ease;
-
-      .rows {
-        background-color: #444;
-
-        width: 25%;
-        font-size: 1.5rem;
-        transition: all 0.5s ease;
-      }
-
-      a {
-        font-family: "EB Garamond", serif;
-        color: $gold;
-        padding-right: 5%;
-        display: flex;
-        align-content: center;
-        justify-content: end;
-        transition: all 0.2s ease;
-        visibility: hidden;
-      }
-    }
-
-    .middle {
-      background-color: transparent;
-      text-align: center;
-      display: grid;
-      grid-template-areas:
-        "icon1 icon2"
-        "icon3 icon4"
-        "icon5 icon6"
-        "icon7 icon8";
-      grid-gap: 0.25rem;
-
-      .item {
-        color: $gold;
-        padding: 10% 5% 0% 5%;
-        text-align: center;
-        opacity: 0.4;
-        transition: all 0.5s ease;
-      }
-    }
-    // Right Side of the Grid
-    .right-side {
-      background: $dark-color-T;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      .rows {
-        background-color: #444;
-        width: 25%;
-        font-size: 1.5rem;
-        margin-left: 75%;
-        transition: all 0.5s ease;
-      }
-
-      a {
-        font-family: "EB Garamond", serif;
-        padding-left: 5%;
-        color: $gold;
-        display: flex;
-        align-content: center;
-        transition: all 0.2s ease;
-        visibility: hidden;
-      }
-    }
-  }
-
-  // Hover State to activate Transistions
-  .container:hover {
-    .left-side {
-      .rows {
-        transform: rotateX(360deg);
-        width: 75%;
-        margin-left: 10%;
-        padding: 5px 0 5px 0;
-        border-radius: 5px;
-        font-size: 1.8rem;
-      }
-
-      a {
-        visibility: visible;
-        color: $gold;
-      }
-    }
-
-    .middle {
-      .item {
-        border: 3px $cream solid;
-        opacity: 1;
-      }
-    }
-
-    .right-side {
-      .rows {
-        transform: rotateX(360deg);
-        width: 75%;
-        margin-left: 15%;
-        padding: 5px 0 5px 0;
-        border-radius: 5px;
-        font-size: 1.8rem;
-      }
-
-      a {
-        visibility: visible;
-        color: $gold;
-      }
-    }
-  }
-}
-
-// Section C About me Home
-#block-c {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0% 2% 7.5% 2%;
   .container {
@@ -379,12 +265,165 @@ ul {
   }
 }
 
+// Section B. Languages & Experience
+
+#block-b {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2% 2% 7.5% 2%;
+
+  a {
+    pointer-events: none;
+    cursor: default;
+  }
+  .header-b {
+    text-align: center;
+    background: transparent;
+    opacity: 1;
+
+    font-size: 2.75rem;
+    color: #ddd;
+    height: 7.5vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 0.5rem;
+
+    height: 60vh;
+
+    // LEft Side of the Grid
+    .left-side {
+      background: $dark-color-T;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      transition: all 0.5s ease;
+
+      .rows {
+        background-color: #444;
+
+        width: 25%;
+        font-size: 1.5rem;
+        transition: all 0.5s ease;
+      }
+
+      a {
+        font-family: "EB Garamond", serif;
+        color: $gold;
+        padding-right: 5%;
+        display: flex;
+        align-content: center;
+        justify-content: end;
+        transition: all 0.2s ease;
+        visibility: hidden;
+      }
+    }
+
+    .middle {
+      background-color: transparent;
+      text-align: center;
+      display: grid;
+      grid-template-areas:
+        "icon1 icon2"
+        "icon3 icon4"
+        "icon5 icon6"
+        "icon7 icon8";
+      grid-gap: 0.25rem;
+
+      .item {
+        color: $gold;
+        padding: 10% 5% 0% 5%;
+        text-align: center;
+        opacity: 0.4;
+        transition: all 0.5s ease;
+      }
+    }
+    // Right Side of the Grid
+    .right-side {
+      background: $dark-color-T;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .rows {
+        background-color: #444;
+        width: 25%;
+        font-size: 1.5rem;
+        margin-left: 75%;
+        transition: all 0.5s ease;
+      }
+
+      a {
+        font-family: "EB Garamond", serif;
+        padding-left: 5%;
+        color: $gold;
+        display: flex;
+        align-content: center;
+        transition: all 0.2s ease;
+        visibility: hidden;
+      }
+    }
+  }
+
+  // Hover State to activate Transistions
+  .container:hover {
+    .left-side {
+      .rows {
+        transform: rotateX(360deg);
+        width: 75%;
+        margin-left: 10%;
+        padding: 5px 0 5px 0;
+        border-radius: 5px;
+        font-size: 1.8rem;
+      }
+
+      a {
+        visibility: visible;
+        color: $gold;
+      }
+    }
+
+    .middle {
+      .item {
+        border: 3px $cream solid;
+        opacity: 1;
+      }
+    }
+
+    .right-side {
+      .rows {
+        transform: rotateX(360deg);
+        width: 75%;
+        margin-left: 15%;
+        padding: 5px 0 5px 0;
+        border-radius: 5px;
+        font-size: 1.8rem;
+      }
+
+      a {
+        visibility: visible;
+        color: $gold;
+      }
+    }
+  }
+}
+
 // Map Section
-#section-d {
+#block-c {
   background-color: rgba(0, 0, 0, 0.2);
 
   height: 60vh;
-  padding: 0% 2% 7.5% 2%;
+  padding: 2% 2% 7.5% 2%;
+
+  .header-c {
+    text-align: center;
+    background: transparent;
+    opacity: 1;
+
+    font-size: 2.75rem;
+    color: #ddd;
+    height: 7.5vh;
+  }
 
   .container {
     display: grid;
@@ -411,84 +450,6 @@ ul {
     .map {
       width: 60vw;
       height: 60vh;
-    }
-  }
-}
-
-// Contact me Block
-#section-e {
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 60vh;
-  padding: 0% 2% 7.5% 2%;
-
-  .container {
-    // opacity: 0.75;
-    background: $dark-green;
-    display: flex;
-    height: inherit;
-    border: 1px $cream solid;
-
-    form {
-      display: flex;
-      width: 55%;
-      color: $gold;
-      font-size: 1.1rem;
-      font-weight: bold;
-
-      .left-side-form {
-        flex: 1.5;
-
-        div {
-          padding: 1.1rem;
-        }
-
-        .contact-me-title {
-          padding-top: 1rem;
-          padding-left: 1rem;
-          padding-bottom: 1rem;
-        }
-
-        label {
-          display: block;
-          padding-bottom: 0.5rem;
-        }
-
-        input {
-          height: 1.3rem;
-          width: 15rem;
-          border-radius: 3px;
-          border: 1px rgb(0, 0, 0) solid;
-        }
-
-        button {
-          margin-top: 0.8rem;
-          margin-left: 4rem;
-          height: 2.2rem;
-          width: 6rem;
-          border: 1px rgb(0, 0, 0) solid;
-          border-radius: 5px;
-        }
-      }
-
-      .subject {
-        flex: 1.5;
-
-        label {
-          display: block;
-          padding-top: 4.05rem;
-        }
-
-        textarea {
-          margin-top: 0.52rem;
-          width: 85%;
-          border: 1px rgb(0, 0, 0) solid;
-          border-radius: 3px;
-        }
-      }
-    }
-
-    img {
-      width: 45%;
     }
   }
 }
@@ -549,3 +510,83 @@ ul {
 
 // Import Media Queries
 @import "media";
+
+// ---------------------------------------------------------
+
+// Contact me Block
+// #section-e {
+//   background-color: rgba(0, 0, 0, 0.2);
+//   height: 60vh;
+//   padding: 0% 2% 7.5% 2%;
+
+//   .container {
+//     // opacity: 0.75;
+//     background: $dark-green;
+//     display: flex;
+//     height: inherit;
+//     border: 1px $cream solid;
+
+//     form {
+//       display: flex;
+//       width: 55%;
+//       color: $gold;
+//       font-size: 1.1rem;
+//       font-weight: bold;
+
+//       .left-side-form {
+//         flex: 1.5;
+
+//         div {
+//           padding: 1.1rem;
+//         }
+
+//         .contact-me-title {
+//           padding-top: 1rem;
+//           padding-left: 1rem;
+//           padding-bottom: 1rem;
+//         }
+
+//         label {
+//           display: block;
+//           padding-bottom: 0.5rem;
+//         }
+
+//         input {
+//           height: 1.3rem;
+//           width: 15rem;
+//           border-radius: 3px;
+//           border: 1px rgb(0, 0, 0) solid;
+//         }
+
+//         button {
+//           margin-top: 0.8rem;
+//           margin-left: 4rem;
+//           height: 2.2rem;
+//           width: 6rem;
+//           border: 1px rgb(0, 0, 0) solid;
+//           border-radius: 5px;
+//         }
+//       }
+
+//       .subject {
+//         flex: 1.5;
+
+//         label {
+//           display: block;
+//           padding-top: 4.05rem;
+//         }
+
+//         textarea {
+//           margin-top: 0.52rem;
+//           width: 85%;
+//           border: 1px rgb(0, 0, 0) solid;
+//           border-radius: 3px;
+//         }
+//       }
+//     }
+
+//     img {
+//       width: 45%;
+//     }
+//   }
+// }
