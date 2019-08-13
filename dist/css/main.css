@@ -48,7 +48,7 @@ ul {
   #header-main h1 {
     font-size: 4rem;
     line-height: 1.5;
-    color: #fff; }
+    color: #e5e5e5; }
     #header-main h1 .h-tag-1 {
       color: #f5d00c; }
     #header-main h1 .h-tag-2 {
@@ -92,6 +92,13 @@ ul {
 #block-a {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0% 2% 7.5% 2%; }
+  #block-a .header-a {
+    text-align: center;
+    background: transparent;
+    opacity: 1;
+    font-size: 2.75rem;
+    color: #ddd;
+    height: 7.5vh; }
   #block-a .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -102,7 +109,7 @@ ul {
       margin: 0 0;
       padding: 0 0;
       height: 100%;
-      background: #fff;
+      background: #e5e5e5;
       height: 2vh; }
     #block-a .container .line-3,
     #block-a .container .line-6 {
@@ -132,15 +139,15 @@ ul {
     #block-a .container .line-6,
     #block-a .container .line-10,
     #block-a .container .line-14 {
-      background-color: #c99d63;
+      background-color: #c48f49;
       transition: all 1s ease-in-out; }
     #block-a .container .line-15 {
       opacity: 0.2;
       background-color: #f4f4f4; }
     #block-a .container .line-14 {
-      background-color: #c99d63; }
+      background-color: #c48f49; }
     #block-a .container .home-about {
-      background: #f4f4f4;
+      background: #e5e5e5;
       color: #222;
       height: 50vh;
       line-height: 3rem;
@@ -148,24 +155,33 @@ ul {
       padding-top: 10%;
       border-radius: 10% 0 0 0; }
       #block-a .container .home-about h1 {
-        padding-top: 10%;
+        padding-top: 2.5%;
         font-size: 3rem; }
       #block-a .container .home-about h2 {
+        padding-top: 2.5%;
         font-size: 2.5rem; }
       #block-a .container .home-about h3 {
+        padding-top: 2.5%;
         font-size: 2rem; }
       #block-a .container .home-about h4 {
-        font-size: 1.5rem; }
+        padding-top: 15%;
+        font-size: 1.3rem; }
     #block-a .container .description {
       height: 50vh;
       text-align: center;
-      background: #c99d63;
+      background: #c48f49;
       color: #f4f4f4;
       padding-top: 10%;
-      font-size: 1.2rem;
       border-radius: 0 10% 0 0; }
       #block-a .container .description .summary {
-        padding-top: 10%; }
+        padding: 2.5% 8% 0 8%;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        text-align: left; }
+      #block-a .container .description .build-stack {
+        padding-top: 7.5%;
+        color: #222; }
   #block-a:hover .line-2,
   #block-a:hover .line-6,
   #block-a:hover .line-10,
@@ -186,7 +202,6 @@ ul {
   #block-b .header-b {
     text-align: center;
     background: transparent;
-    opacity: 1;
     font-size: 2.75rem;
     color: #ddd;
     height: 7.5vh; }
@@ -199,8 +214,7 @@ ul {
       background: rgba(34, 34, 34, 0.9);
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      transition: all 0.5s ease; }
+      justify-content: space-around; }
       #block-b .container .left-side .rows {
         background-color: #444;
         width: 25%;
@@ -313,6 +327,34 @@ ul {
     display: flex; }
     #footer .container .copyright {
       flex: 1; }
+    #footer .container .tooltip {
+      position: relative;
+      font-size: 1rem;
+      color: #f5d00c;
+      padding-top: 1.75%; }
+      #footer .container .tooltip .tooltiptext {
+        visibility: hidden;
+        background-color: #fcf1b3;
+        color: #003220;
+        text-align: center;
+        padding: 3px 3;
+        position: absolute;
+        border-radius: 5px;
+        width: 200px;
+        bottom: 75%;
+        left: 50%;
+        margin-left: -40px; }
+    #footer .container .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 20%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #fcf1b3 transparent transparent transparent; }
+    #footer .container .tooltip:hover .tooltiptext {
+      visibility: visible; }
     #footer .container .item-links {
       flex: 2;
       text-align: end;
