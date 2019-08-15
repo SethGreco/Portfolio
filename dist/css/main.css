@@ -102,15 +102,14 @@ ul {
   #block-a .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1vw; }
+    grid-column-gap: 2%; }
     #block-a .container .sec {
       position: relative; }
     #block-a .container .lines {
       margin: 0 0;
       padding: 0 0;
-      height: 100%;
       background: #e5e5e5;
-      height: 2vh; }
+      height: 1.5rem; }
     #block-a .container .line-3,
     #block-a .container .line-6 {
       opacity: 0.8; }
@@ -184,12 +183,12 @@ ul {
   #block-a:hover .line-6,
   #block-a:hover .line-10,
   #block-a:hover .line-14 {
-    transform: translateX(-102.05%); }
+    transform: translateX(-104.05%); }
   #block-a:hover .line-3,
   #block-a:hover .line-7,
   #block-a:hover .line-11,
   #block-a:hover .line-15 {
-    transform: translateX(102%); }
+    transform: translateX(104.05%); }
 
 #block-b {
   background-color: rgba(0, 0, 0, 0.2);
@@ -384,29 +383,100 @@ ul {
   #main-nav {
     flex-direction: column;
     align-items: center; }
-  #header-main h1 {
-    font-size: 3rem; }
+    #main-nav ul {
+      margin-right: 0; }
+  #header-main {
+    height: 100vh; }
+    #header-main h1 {
+      font-size: 2.5rem; }
+  #block-a,
+  #block-b,
   #block-c {
-    padding: 0 0 5% 0; }
-    #block-c .container .home-about,
-    #block-c .container .description {
-      border-radius: 0; }
-  #block-a {
-    padding: 0 0 5% 0; }
-    #block-a .header-a {
-      font-size: 2rem; }
-    #block-a .container {
-      height: 50vh; }
-    #block-a .container .left-side .rows {
-      font-size: 1rem; }
-  #section-d {
-    padding: 0 0 5% 0; }
-  #section-e {
-    padding: 0 0 5% 0; }
-    #section-e .container form .subject textarea {
-      width: 100%; }
-    #section-e .container img {
-      width: 0%; } }
+    padding: 0 0 20% 0; }
+  #block-a .header-a {
+    height: 35px;
+    padding-bottom: 5%;
+    font-size: 2.25rem; }
+  #block-b .header-b {
+    height: 70px;
+    padding-bottom: 10%;
+    font-size: 2.25rem; }
+  #block-c .header-c {
+    height: 35px;
+    padding-bottom: 5%;
+    font-size: 2.25rem; }
+  #block-a .container {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0; }
+    #block-a .container .lines {
+      height: 0;
+      width: 0; }
+    #block-a .container .home-about,
+    #block-a .container .description {
+      border-radius: 0;
+      padding-top: 5%; }
+  #block-b .container {
+    grid-template-columns: 1fr;
+    pointer-events: none; }
+    #block-b .container .left-side {
+      background-color: #003220;
+      flex-direction: row;
+      height: auto; }
+      #block-b .container .left-side .rows {
+        background-color: #003220;
+        width: auto;
+        font-size: 1.3rem;
+        transition: unset; }
+        #block-b .container .left-side .rows a {
+          padding-right: 0;
+          transition: unset;
+          visibility: visible; }
+    #block-b .container .middle {
+      grid-gap: 0; }
+      #block-b .container .middle .item {
+        padding: auto;
+        opacity: 1;
+        border: 1px #fcf1b3 solid;
+        transition: unset; }
+    #block-b .container .right-side {
+      background-color: #003220;
+      flex-direction: row;
+      height: auto; }
+      #block-b .container .right-side .rows {
+        background-color: #003220;
+        width: auto;
+        font-size: 1.3rem;
+        transition: unset;
+        margin-left: 0; }
+        #block-b .container .right-side .rows a {
+          padding-right: 0;
+          transition: unset;
+          visibility: visible; }
+  #block-c .container {
+    grid-template-columns: 1fr; }
+    #block-c .container .left-side-text .vistor-text {
+      font-size: 1.5rem;
+      padding-top: 5%; }
+    #block-c .container .left-side-text #React {
+      padding-top: 2.5%;
+      padding-bottom: 3%; }
+    #block-c .container .map {
+      min-height: 300px; }
+  #footer h4 {
+    font-size: 0.8rem;
+    margin-left: 2.5%;
+    margin-right: 2.5%; }
+  #footer .container .tooltip {
+    font-size: 0.8rem;
+    margin-right: 1%; }
+  #footer .container .item-links {
+    margin-right: 2.5%;
+    padding: 0; }
+    #footer .container .item-links a i {
+      margin-left: 0;
+      height: 35px;
+      width: 35px;
+      line-height: 35px; } }
 
 @media (min-width: 1900px) {
   #block-a {

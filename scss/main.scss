@@ -147,9 +147,7 @@ ul {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
-    grid-column-gap: 1vw;
-
+    grid-column-gap: 2%;
     .sec {
       position: relative;
     }
@@ -157,9 +155,9 @@ ul {
     .lines {
       margin: 0 0;
       padding: 0 0;
-      height: 100%;
+
       background: #e5e5e5;
-      height: 2vh;
+      height: 1.5rem;
     }
 
     .line-3,
@@ -270,14 +268,14 @@ ul {
     .line-6,
     .line-10,
     .line-14 {
-      transform: translateX(-102.05%);
+      transform: translateX(-104.05%);
     }
 
     .line-3,
     .line-7,
     .line-11,
     .line-15 {
-      transform: translateX(102%);
+      transform: translateX(104.05%);
     }
   }
 }
