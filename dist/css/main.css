@@ -98,7 +98,7 @@ ul {
     opacity: 1;
     font-size: 2.75rem;
     color: #ddd;
-    height: 7.5vh; }
+    height: 10%; }
   #block-a .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -149,7 +149,6 @@ ul {
     #block-a .container .home-about {
       background: #e5e5e5;
       color: #222;
-      height: 50vh;
       line-height: 3rem;
       text-align: center;
       padding-top: 10%;
@@ -167,7 +166,6 @@ ul {
         padding-top: 15%;
         font-size: 1.3rem; }
     #block-a .container .description {
-      height: 50vh;
       text-align: center;
       background: #c48f49;
       color: #f4f4f4;
@@ -204,12 +202,13 @@ ul {
     background: transparent;
     font-size: 2.75rem;
     color: #ddd;
-    height: 7.5vh; }
+    height: 10%; }
   #block-b .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 0.5rem;
-    height: 60vh; }
+    height: auto;
+    overflow: hidden; }
     #block-b .container .left-side {
       background: rgba(34, 34, 34, 0.9);
       display: flex;
@@ -220,15 +219,15 @@ ul {
         width: 25%;
         font-size: 1.5rem;
         transition: all 0.5s ease; }
-      #block-b .container .left-side a {
-        font-family: "EB Garamond", serif;
-        color: #f5d00c;
-        padding-right: 5%;
-        display: flex;
-        align-content: center;
-        justify-content: end;
-        transition: all 0.2s ease;
-        visibility: hidden; }
+        #block-b .container .left-side .rows a {
+          font-family: "EB Garamond", serif;
+          color: #f5d00c;
+          padding-right: 5%;
+          display: flex;
+          align-content: center;
+          justify-content: end;
+          transition: all 0.2s ease;
+          visibility: hidden; }
     #block-b .container .middle {
       background-color: transparent;
       text-align: center;
@@ -237,7 +236,7 @@ ul {
       grid-gap: 0.25rem; }
       #block-b .container .middle .item {
         color: #f5d00c;
-        padding: 10% 5% 0% 5%;
+        padding: 10% 5% 10% 5%;
         text-align: center;
         opacity: 0.4;
         transition: all 0.5s ease; }
@@ -286,7 +285,6 @@ ul {
 
 #block-c {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 60vh;
   padding: 2% 2% 7.5% 2%; }
   #block-c .header-c {
     text-align: center;
@@ -294,12 +292,14 @@ ul {
     opacity: 1;
     font-size: 2.75rem;
     color: #ddd;
-    height: 7.5vh; }
+    height: 10%; }
   #block-c .container {
     display: grid;
     background: rgba(34, 34, 34, 0.9);
-    grid-template-columns: repeat(2, 1fr);
-    border: 1px #fcf1b3 solid; }
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px #fcf1b3 solid;
+    height: auto;
+    overflow: auto; }
     #block-c .container .left-side-text {
       color: #fff;
       text-align: center; }
@@ -312,26 +312,28 @@ ul {
       #block-c .container .left-side-text #React {
         padding-top: 5%; }
     #block-c .container .map {
-      width: 60vw;
-      height: 60vh; }
+      min-height: 500px;
+      grid-column-start: 1;
+      grid-column-end: 3; }
 
 #footer {
-  background: #222; }
+  background: #222;
+  height: 5rem; }
   #footer h4 {
     color: #fff;
     font-size: 1.2rem;
     padding-left: 1.5%;
-    padding-top: 1.75%;
     margin-left: 3.5%; }
   #footer .container {
-    display: flex; }
+    height: 5rem;
+    display: flex;
+    align-items: center; }
     #footer .container .copyright {
       flex: 1; }
     #footer .container .tooltip {
       position: relative;
       font-size: 1rem;
-      color: #f5d00c;
-      padding-top: 1.75%; }
+      color: #f5d00c; }
       #footer .container .tooltip .tooltiptext {
         visibility: hidden;
         background-color: #fcf1b3;
@@ -341,7 +343,7 @@ ul {
         position: absolute;
         border-radius: 5px;
         width: 200px;
-        bottom: 75%;
+        bottom: 150%;
         left: 50%;
         margin-left: -40px; }
     #footer .container .tooltip .tooltiptext::after {
@@ -359,9 +361,7 @@ ul {
       flex: 2;
       text-align: end;
       margin-right: 3.5%;
-      padding: 0.5rem;
-      justify-content: space-between;
-      align-items: center; }
+      padding: 0.5rem; }
       #footer .container .item-links a {
         text-align: center;
         justify-content: center; }
@@ -410,10 +410,29 @@ ul {
 
 @media (min-width: 1900px) {
   #block-a {
+    padding: 0 5% 7.5% 5%;
+    align-content: center; }
+    #block-a .header-a {
+      font-size: 3.25rem; }
+    #block-a .container .home-about {
+      line-height: 3.5rem; }
+      #block-a .container .home-about h1 {
+        font-size: 3.5rem; }
+      #block-a .container .home-about h2 {
+        font-size: 3rem; }
+      #block-a .container .home-about h3 {
+        font-size: 2.5rem; }
+      #block-a .container .home-about h4 {
+        font-size: 1.8rem; }
+    #block-a .container .description .summary {
+      font-size: 1.5rem; }
+    #block-a .container .description .build-stack {
+      font-size: 1.2rem; }
+  #block-b {
     padding: 0 5% 7.5% 5%; }
+    #block-b .header-b {
+      font-size: 3.25rem; }
   #block-c {
     padding: 0 5% 7.5% 5%; }
-  #section-d {
-    padding: 0 5% 7.5% 5%; }
-  #section-e {
-    padding: 0 5% 7.5% 5%; } }
+    #block-c .header-c {
+      font-size: 3.25rem; } }

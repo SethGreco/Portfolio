@@ -142,7 +142,7 @@ ul {
 
     font-size: 2.75rem;
     color: #ddd;
-    height: 7.5vh;
+    height: 10%;
   }
   .container {
     display: grid;
@@ -215,7 +215,6 @@ ul {
     .home-about {
       background: #e5e5e5;
       color: $dark-color;
-      height: 50vh;
 
       line-height: 3rem;
       text-align: center;
@@ -244,8 +243,6 @@ ul {
     }
 
     .description {
-      height: 50vh;
-
       text-align: center;
       background: $tan;
       color: $light-color;
@@ -301,14 +298,15 @@ ul {
 
     font-size: 2.75rem;
     color: #ddd;
-    height: 7.5vh;
+    height: 10%;
   }
   .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 0.5rem;
 
-    height: 60vh;
+    height: auto;
+    overflow: hidden;
 
     // LEft Side of the Grid
     .left-side {
@@ -319,27 +317,27 @@ ul {
 
       .rows {
         background-color: #444;
-
         width: 25%;
         font-size: 1.5rem;
         transition: all 0.5s ease;
-      }
 
-      a {
-        font-family: "EB Garamond", serif;
-        color: $gold;
-        padding-right: 5%;
-        display: flex;
-        align-content: center;
-        justify-content: end;
-        transition: all 0.2s ease;
-        visibility: hidden;
+        a {
+          font-family: "EB Garamond", serif;
+          color: $gold;
+          padding-right: 5%;
+          display: flex;
+          align-content: center;
+          justify-content: end;
+          transition: all 0.2s ease;
+          visibility: hidden;
+        }
       }
     }
 
     .middle {
       background-color: transparent;
       text-align: center;
+
       display: grid;
       grid-template-areas:
         "icon1 icon2"
@@ -350,7 +348,7 @@ ul {
 
       .item {
         color: $gold;
-        padding: 10% 5% 0% 5%;
+        padding: 10% 5% 10% 5%;
         text-align: center;
         opacity: 0.4;
         transition: all 0.5s ease;
@@ -429,8 +427,6 @@ ul {
 // Map Section
 #block-c {
   background-color: rgba(0, 0, 0, 0.2);
-
-  height: 60vh;
   padding: 2% 2% 7.5% 2%;
 
   .header-c {
@@ -440,14 +436,16 @@ ul {
 
     font-size: 2.75rem;
     color: #ddd;
-    height: 7.5vh;
+    height: 10%;
   }
 
   .container {
     display: grid;
     background: $dark-color-T;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     border: 1px $cream solid;
+    height: auto;
+    overflow: auto;
     .left-side-text {
       color: #fff;
       text-align: center;
@@ -466,8 +464,9 @@ ul {
     }
 
     .map {
-      width: 60vw;
-      height: 60vh;
+      min-height: 500px;
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
   }
 }
@@ -475,17 +474,17 @@ ul {
 // Footer on Landing Page
 #footer {
   background: $dark-color;
-
+  height: 5rem;
   h4 {
     color: #fff;
     font-size: 1.2rem;
     padding-left: 1.5%;
-    padding-top: 1.75%;
     margin-left: 3.5%;
   }
   .container {
+    height: 5rem;
     display: flex;
-
+    align-items: center;
     .copyright {
       flex: 1;
     }
@@ -494,7 +493,6 @@ ul {
       position: relative;
       font-size: 1rem;
       color: $gold;
-      padding-top: 1.75%;
 
       .tooltiptext {
         visibility: hidden;
@@ -505,7 +503,7 @@ ul {
         position: absolute;
         border-radius: 5px;
         width: 200px;
-        bottom: 75%;
+        bottom: 150%;
         left: 50%;
         margin-left: -40px;
       }
@@ -530,9 +528,6 @@ ul {
       margin-right: 3.5%;
 
       padding: 0.5rem;
-      justify-content: space-between;
-
-      align-items: center;
 
       a {
         text-align: center;
@@ -562,83 +557,3 @@ ul {
 
 // Import Media Queries
 @import "media";
-
-// ---------------------------------------------------------
-
-// Contact me Block
-// #section-e {
-//   background-color: rgba(0, 0, 0, 0.2);
-//   height: 60vh;
-//   padding: 0% 2% 7.5% 2%;
-
-//   .container {
-//     // opacity: 0.75;
-//     background: $dark-green;
-//     display: flex;
-//     height: inherit;
-//     border: 1px $cream solid;
-
-//     form {
-//       display: flex;
-//       width: 55%;
-//       color: $gold;
-//       font-size: 1.1rem;
-//       font-weight: bold;
-
-//       .left-side-form {
-//         flex: 1.5;
-
-//         div {
-//           padding: 1.1rem;
-//         }
-
-//         .contact-me-title {
-//           padding-top: 1rem;
-//           padding-left: 1rem;
-//           padding-bottom: 1rem;
-//         }
-
-//         label {
-//           display: block;
-//           padding-bottom: 0.5rem;
-//         }
-
-//         input {
-//           height: 1.3rem;
-//           width: 15rem;
-//           border-radius: 3px;
-//           border: 1px rgb(0, 0, 0) solid;
-//         }
-
-//         button {
-//           margin-top: 0.8rem;
-//           margin-left: 4rem;
-//           height: 2.2rem;
-//           width: 6rem;
-//           border: 1px rgb(0, 0, 0) solid;
-//           border-radius: 5px;
-//         }
-//       }
-
-//       .subject {
-//         flex: 1.5;
-
-//         label {
-//           display: block;
-//           padding-top: 4.05rem;
-//         }
-
-//         textarea {
-//           margin-top: 0.52rem;
-//           width: 85%;
-//           border: 1px rgb(0, 0, 0) solid;
-//           border-radius: 3px;
-//         }
-//       }
-//     }
-
-//     img {
-//       width: 45%;
-//     }
-//   }
-// }
