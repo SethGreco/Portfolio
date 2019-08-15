@@ -1,5 +1,76 @@
 // Tablet format
 @media (max-width: 800px) {
+  #main-nav {
+    ul {
+      margin-right: 1.5%;
+    }
+    li {
+      padding: 0.5rem 0.25rem;
+    }
+  }
+
+  #block-a {
+    pointer-events: none;
+    padding: 0 2% 12.5% 2%;
+    .container {
+      .lines {
+        height: 1rem;
+      }
+    }
+  }
+
+  #block-b {
+    pointer-events: none;
+    padding: 0 2% 12.5% 2%;
+    .container {
+      .left-side {
+        .rows {
+          background-color: $dark-color;
+          width: 75%;
+          a {
+            visibility: visible;
+          }
+        }
+      }
+
+      .middle {
+        .item {
+          border: 3px $cream solid;
+          opacity: 1;
+        }
+      }
+
+      .right-side {
+        .rows {
+          background-color: $dark-color;
+          width: 75%;
+          margin-left: 25%;
+        }
+        a {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  #block-c {
+    .container {
+      .left-side-text {
+        .vistor-text {
+          font-size: 1.3rem;
+        }
+        #React {
+          padding-top: 20%;
+        }
+      }
+    }
+  }
+
+  #footer {
+    h4 {
+      font-size: 1rem;
+    }
+  }
 }
 
 // Smartphone format
@@ -157,9 +228,78 @@
 
 // Landscapes
 @media (max-height: 580px) {
+  body {
+    pointer-events: none;
+  }
+  #block-b {
+    .container {
+      .left-side {
+        .rows {
+          background-color: $dark-color;
+          width: 75%;
+          a {
+            visibility: visible;
+          }
+        }
+      }
+
+      .middle {
+        .item {
+          border: 1px $cream solid;
+          opacity: 1;
+        }
+      }
+
+      .right-side {
+        .rows {
+          background-color: $dark-color;
+          width: 75%;
+          margin-left: 25%;
+        }
+        a {
+          visibility: visible;
+        }
+      }
+    }
+  }
 }
 
 @media (max-height: 330px) {
+  body {
+    pointer-events: none;
+  }
+
+  #block-b {
+    .container {
+      .left-side {
+        .rows {
+          background-color: $dark-color;
+          width: 75%;
+          a {
+            visibility: visible;
+          }
+        }
+      }
+
+      .middle {
+        .item {
+          border: 1px $cream solid;
+          opacity: 1;
+        }
+      }
+
+      .right-side {
+        .rows {
+          background-color: $dark-color;
+          width: 75%;
+          margin-left: 25%;
+        }
+        a {
+          visibility: visible;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1900px) {

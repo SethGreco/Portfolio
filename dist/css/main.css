@@ -19,41 +19,6 @@ ul {
   display: block;
   margin: 0 auto 1rem auto; }
 
-#header-main {
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-  font-family: "EB Garamond", serif; }
-  #header-main .container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    height: 90%; }
-    #header-main .container .item-links a {
-      text-align: center; }
-      #header-main .container .item-links a i {
-        color: #fff;
-        margin-right: 1rem;
-        border: 1px #fff solid;
-        border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        line-height: 25px;
-        padding: 0.3rem;
-        transition: all 0.5s; }
-        #header-main .container .item-links a i:hover {
-          background: #228b22;
-          border: 1px #f5d00c solid;
-          transform: rotateZ(360deg); }
-  #header-main h1 {
-    font-size: 4rem;
-    line-height: 1.5;
-    color: #e5e5e5; }
-    #header-main h1 .h-tag-1 {
-      color: #f5d00c; }
-    #header-main h1 .h-tag-2 {
-      color: #228b22; }
-
 #main-nav {
   display: flex;
   position: sticky;
@@ -88,6 +53,41 @@ ul {
     border-radius: 5%; }
     #main-nav li:hover a {
       color: #222; }
+
+#header-main {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: "EB Garamond", serif; }
+  #header-main .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 90%; }
+    #header-main .container .item-links a {
+      text-align: center; }
+      #header-main .container .item-links a i {
+        color: #fff;
+        margin-right: 1rem;
+        border: 1px #fff solid;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+        padding: 0.3rem;
+        transition: all 0.5s; }
+        #header-main .container .item-links a i:hover {
+          background: #228b22;
+          border: 1px #f5d00c solid;
+          transform: rotateZ(360deg); }
+  #header-main h1 {
+    font-size: 4rem;
+    line-height: 1.5;
+    color: #e5e5e5; }
+    #header-main h1 .h-tag-1 {
+      color: #f5d00c; }
+    #header-main h1 .h-tag-2 {
+      color: #228b22; }
 
 #block-a {
   background-color: rgba(0, 0, 0, 0.2);
@@ -379,6 +379,40 @@ ul {
             border: 2px #f5d00c dotted;
             transform: rotateZ(360deg); }
 
+@media (max-width: 800px) {
+  #main-nav ul {
+    margin-right: 1.5%; }
+  #main-nav li {
+    padding: 0.5rem 0.25rem; }
+  #block-a {
+    pointer-events: none;
+    padding: 0 2% 12.5% 2%; }
+    #block-a .container .lines {
+      height: 1rem; }
+  #block-b {
+    pointer-events: none;
+    padding: 0 2% 12.5% 2%; }
+    #block-b .container .left-side .rows {
+      background-color: #222;
+      width: 75%; }
+      #block-b .container .left-side .rows a {
+        visibility: visible; }
+    #block-b .container .middle .item {
+      border: 3px #fcf1b3 solid;
+      opacity: 1; }
+    #block-b .container .right-side .rows {
+      background-color: #222;
+      width: 75%;
+      margin-left: 25%; }
+    #block-b .container .right-side a {
+      visibility: visible; }
+  #block-c .container .left-side-text .vistor-text {
+    font-size: 1.3rem; }
+  #block-c .container .left-side-text #React {
+    padding-top: 20%; }
+  #footer h4 {
+    font-size: 1rem; } }
+
 @media (max-width: 500px) {
   #main-nav {
     flex-direction: column;
@@ -477,6 +511,42 @@ ul {
       height: 35px;
       width: 35px;
       line-height: 35px; } }
+
+@media (max-height: 580px) {
+  body {
+    pointer-events: none; }
+  #block-b .container .left-side .rows {
+    background-color: #222;
+    width: 75%; }
+    #block-b .container .left-side .rows a {
+      visibility: visible; }
+  #block-b .container .middle .item {
+    border: 1px #fcf1b3 solid;
+    opacity: 1; }
+  #block-b .container .right-side .rows {
+    background-color: #222;
+    width: 75%;
+    margin-left: 25%; }
+  #block-b .container .right-side a {
+    visibility: visible; } }
+
+@media (max-height: 330px) {
+  body {
+    pointer-events: none; }
+  #block-b .container .left-side .rows {
+    background-color: #222;
+    width: 75%; }
+    #block-b .container .left-side .rows a {
+      visibility: visible; }
+  #block-b .container .middle .item {
+    border: 1px #fcf1b3 solid;
+    opacity: 1; }
+  #block-b .container .right-side .rows {
+    background-color: #222;
+    width: 75%;
+    margin-left: 25%; }
+  #block-b .container .right-side a {
+    visibility: visible; } }
 
 @media (min-width: 1900px) {
   #block-a {
