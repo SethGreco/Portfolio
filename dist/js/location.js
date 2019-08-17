@@ -1,14 +1,5 @@
 "use strict";
 
-const btnStyle = {
-  background: "#555",
-  color: "#f5d00c",
-  fontSize: "1.3rem",
-  border: "1px #ccc solid",
-  borderRadius: "5px",
-  padding: "15px"
-};
-
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +15,7 @@ class LikeButton extends React.Component {
       // we called setstate
       this.setState({ lat: position.coords.latitude });
       this.setState({ long: position.coords.longitude });
-      console.log(this.state.long, this.state.lat);
+      // console.log(this.state.long, this.state.lat);
     });
   }
 
@@ -37,7 +28,12 @@ class LikeButton extends React.Component {
       body: JSON.stringify(loc),
       headers: new Headers({ "Content-Type": "application/json" })
     };
-    fetch(url, conf).then(response => console.log(response));
+
+    if (loc.lat === null || loc.long === null) {
+      console.log("Null Values cannot be post");
+    } else {
+      fetch(url, conf).then(response => console.log(response));
+    }
   }
 
   render() {
@@ -46,7 +42,14 @@ class LikeButton extends React.Component {
     }
 
     return (
-      <button style={btnStyle} onClick={() => this.postCords()}>
+      <button
+        ref="btn"
+        onClick={() => {
+          if (window.confirm("Please Confirm Coordinate Submission"))
+            this.refs.btn.setAttribute("disabled", "disabled"),
+              this.postCords();
+        }}
+      >
         Post Your Coords!
       </button>
     );

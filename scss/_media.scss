@@ -1,5 +1,5 @@
 // Tablet format
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   #main-nav {
     ul {
       margin-right: 1.5%;
@@ -212,7 +212,7 @@
         margin-right: 1%;
       }
       .item-links {
-        margin-right: 2.5%;
+        margin-right: 1%;
         padding: 0;
 
         a i {
@@ -220,6 +220,7 @@
           height: 35px;
           width: 35px;
           line-height: 35px;
+          padding: 0.2rem;
         }
       }
     }

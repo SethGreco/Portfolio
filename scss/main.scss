@@ -235,7 +235,7 @@ ul {
       }
 
       h4 {
-        padding-top: 15%;
+        padding-top: 1.75%;
         font-size: 1.3rem;
       }
     }
@@ -457,7 +457,26 @@ ul {
       }
 
       #React {
-        padding-top: 5%;
+        margin-top: 10%;
+        button {
+          background-color: $gold;
+          color: $dark-color;
+          padding: 15px;
+          border: 3px #e5e5e5 solid;
+          border-radius: 10px;
+          font-size: 1rem;
+          transition: all 0.2s ease-in-out;
+        }
+        button:hover {
+          background: $water;
+          border: 3px $gold solid;
+          color: $dark-color;
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+        button:active {
+          transform: translateY(1px);
+        }
       }
     }
 

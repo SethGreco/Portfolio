@@ -162,7 +162,7 @@ ul {
         padding-top: 2.5%;
         font-size: 2rem; }
       #block-a .container .home-about h4 {
-        padding-top: 15%;
+        padding-top: 1.75%;
         font-size: 1.3rem; }
     #block-a .container .description {
       text-align: center;
@@ -309,7 +309,23 @@ ul {
         margin-left: 7.5%;
         margin-right: 7.5%; }
       #block-c .container .left-side-text #React {
-        padding-top: 5%; }
+        margin-top: 10%; }
+        #block-c .container .left-side-text #React button {
+          background-color: #f5d00c;
+          color: #222;
+          padding: 15px;
+          border: 3px #e5e5e5 solid;
+          border-radius: 10px;
+          font-size: 1rem;
+          transition: all 0.2s ease-in-out; }
+        #block-c .container .left-side-text #React button:hover {
+          background: #b6d9ff;
+          border: 3px #f5d00c solid;
+          color: #222;
+          cursor: pointer;
+          transform: scale(1.1); }
+        #block-c .container .left-side-text #React button:active {
+          transform: translateY(1px); }
     #block-c .container .map {
       min-height: 500px;
       grid-column-start: 1;
@@ -379,7 +395,7 @@ ul {
             border: 2px #f5d00c dotted;
             transform: rotateZ(360deg); }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   #main-nav ul {
     margin-right: 1.5%; }
   #main-nav li {
@@ -504,13 +520,14 @@ ul {
     font-size: 0.8rem;
     margin-right: 1%; }
   #footer .container .item-links {
-    margin-right: 2.5%;
+    margin-right: 1%;
     padding: 0; }
     #footer .container .item-links a i {
       margin-left: 0;
       height: 35px;
       width: 35px;
-      line-height: 35px; } }
+      line-height: 35px;
+      padding: 0.2rem; } }
 
 @media (max-height: 580px) {
   body {

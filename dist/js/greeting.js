@@ -5,7 +5,7 @@ z = new Date();
 
 window.onload = () => {
   time = z.getHours();
-  console.log(time);
+  // console.log(time);
   if (time < 12 && time >= 3) {
     y.innerHTML = "Good Morning";
   } else if (time >= 12 && time <= 18) {
