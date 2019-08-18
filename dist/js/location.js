@@ -32,7 +32,10 @@ class LikeButton extends React.Component {
     if (loc.lat === null || loc.long === null) {
       console.log("Null Values cannot be post");
     } else {
-      fetch(url, conf).then(response => console.log(response));
+      if (window.confirm("Please Confirm Coordinate Submission")) {
+        fetch(url, conf).then(response => console.log(response));
+        this.refs.btn.setAttribute("disabled", "disabled");
+      }
     }
   }
 
@@ -40,14 +43,11 @@ class LikeButton extends React.Component {
     if (this.state.liked) {
       return this.state.lat + ", " + this.state.long;
     }
-
     return (
       <button
         ref="btn"
         onClick={() => {
-          if (window.confirm("Please Confirm Coordinate Submission"))
-            this.refs.btn.setAttribute("disabled", "disabled"),
-              this.postCords();
+          this.postCords();
         }}
       >
         Post Your Coords!
