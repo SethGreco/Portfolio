@@ -11,12 +11,17 @@ class LikeButton extends React.Component {
   }
 
   componentDidMount() {
-    window.navigator.geolocation.getCurrentPosition(position => {
-      // we called setstate
-      this.setState({ lat: position.coords.latitude });
-      this.setState({ long: position.coords.longitude });
-      // console.log(this.state.long, this.state.lat);
-    });
+    window.navigator.geolocation.getCurrentPosition(
+      position => {
+        this.setState({ lat: position.coords.latitude });
+        this.setState({ long: position.coords.longitude });
+      },
+      err => this.refs.btn.setAttribute("disabled", "disabled")
+    );
+  }
+
+  refreshPage() {
+    window.location.reload(false);
   }
 
   postCords() {
@@ -28,13 +33,11 @@ class LikeButton extends React.Component {
       body: JSON.stringify(loc),
       headers: new Headers({ "Content-Type": "application/json" })
     };
-
     if (loc.lat === null || loc.long === null) {
-      console.log("Null Values cannot be post");
     } else {
       if (window.confirm("Please Confirm Coordinate Submission")) {
-        fetch(url, conf).then(response => console.log(response));
-        this.refs.btn.setAttribute("disabled", "disabled");
+        fetch(url, conf).then(response => console.log(response)),
+          this.refs.btn.setAttribute("disabled", "disabled");
       }
     }
   }
@@ -44,14 +47,23 @@ class LikeButton extends React.Component {
       return this.state.lat + ", " + this.state.long;
     }
     return (
-      <button
-        ref="btn"
-        onClick={() => {
-          this.postCords();
-        }}
-      >
-        Post Your Coords!
-      </button>
+      <div>
+        <button
+          ref="btn"
+          onClick={() => {
+            this.postCords();
+          }}
+        >
+          Post Your Coords!
+        </button>
+        <button
+          onClick={() => {
+            this.refreshPage();
+          }}
+        >
+          Reload
+        </button>
+      </div>
     );
   }
 }

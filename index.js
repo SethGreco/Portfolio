@@ -7,13 +7,14 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const router = express.Router();
 const cors = require("cors");
-// const helmet = require("helmet");
+const helmet = require("helmet");
 
-// app.use(helmet.hidePoweredBy({ setTo: "DummyServer 1.0" })); //change value of X-Powered-By header to given value
-// app.use(helmet.noCache({ noEtag: true })); //set Cache-Control header
-// app.use(helmet.noSniff()); // set X-Content-Type-Options header
-// app.use(helmet.frameguard()); // set X-Frame-Options header
-// app.use(helmet.xssFilter()); // set X-XSS-Protection header
+app.use(helmet.hidePoweredBy({ setTo: "DummyServer 1.0" })); //change value of X-Powered-By header to given value
+app.use(helmet.noCache({ noEtag: true })); //set Cache-Control header
+app.use(helmet.noSniff()); // set X-Content-Type-Options header
+app.use(helmet.frameguard()); // set X-Frame-Options header
+app.use(helmet.xssFilter()); // set X-XSS-Protection header
+
 app.use(cors());
 app.use(bodyParser.json());
 

@@ -584,6 +584,7 @@ ul {
     #block-a .container .description .summary {
       font-size: 1.5rem; }
     #block-a .container .description .build-stack {
+      padding-top: 15%;
       font-size: 1.2rem; }
   #block-b {
     padding: 0 5% 7.5% 5%; }
