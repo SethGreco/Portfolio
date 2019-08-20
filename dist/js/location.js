@@ -20,9 +20,16 @@ class LikeButton extends React.Component {
     );
   }
 
-  refreshPage() {
-    window.location.reload(false);
-  }
+  // <button
+  //         onClick={() => {
+  //           this.refreshPage();
+  //         }}
+  //       >
+  //         Reload
+  //       </button>
+  // refreshPage() {
+  //   window.location.reload(false);
+  // }
 
   postCords() {
     const { lat, long } = this.state;
@@ -55,13 +62,6 @@ class LikeButton extends React.Component {
           }}
         >
           Post Your Coords!
-        </button>
-        <button
-          onClick={() => {
-            this.refreshPage();
-          }}
-        >
-          Reload
         </button>
       </div>
     );
