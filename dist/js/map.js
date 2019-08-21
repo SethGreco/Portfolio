@@ -21,5 +21,5 @@ async function initMap() {
 }
 
 function getData() {
-  return fetch("http://localhost:3000/get").then(response => response.json());
+  return fetch("http://localhost:5000/get").then(response => response.json());
 }
