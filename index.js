@@ -74,5 +74,5 @@ app.use(function(err, req, res, next) {
 
 app.use("/", router);
 
-app.listen(process.env.port || 5000);
+app.listen(process.env.PORT || 5000);
 // app.listen(process.env.port || 3000, "0.0.0.0");
