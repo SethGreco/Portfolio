@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const keys = require("./config/keys");
+// const keys = require("./config/keys");
 const path = require("path");
 const bodyParser = require("body-parser");
 const router = express.Router();
@@ -18,15 +18,15 @@ app.use(helmet.xssFilter()); // set X-XSS-Protection header
 app.use(cors());
 app.use(bodyParser.json());
 
-let Cords = require("./models/cords");
+const Cords = require("./models/cords");
 
 mongoose.Promise = global.Promise;
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
-const connection = mongoose.connection;
+// mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
+// const connection = mongoose.connection;
 
-connection.once("open", function() {
-  console.log("MongoDB Connected!");
-});
+// connection.once("open", function() {
+//   console.log("MongoDB Connected!");
+// });
 
 app.use(express.static(__dirname + "/dist"));
 
