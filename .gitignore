@@ -2,3 +2,4 @@ node_modules
 keys.js
 images
 client
+Dockerfile
