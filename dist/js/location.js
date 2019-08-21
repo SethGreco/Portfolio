@@ -34,7 +34,8 @@ class LikeButton extends React.Component {
   postCords() {
     const { lat, long } = this.state;
     const loc = { lat, long };
-    const url = "http://localhost:5000/add";
+    // const url = "http://localhost:5000/add";
+    const url = "https://fierce-crag-41814.herokuapp.com/add";
     const conf = {
       method: "post",
       body: JSON.stringify(loc),

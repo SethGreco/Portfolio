@@ -21,5 +21,8 @@ async function initMap() {
 }
 
 function getData() {
-  return fetch("http://localhost:5000/get").then(response => response.json());
+  // return fetch("http://localhost:5000/get").then(response => response.json());
+  return fetch("https://fierce-crag-41814.herokuapp.com/get").then(response =>
+    response.json()
+  );
 }
