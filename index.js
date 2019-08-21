@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const keys = require("./config/keys");
+// const keys = require("./config/keys");
 const path = require("path");
 const bodyParser = require("body-parser");
 const router = express.Router();
