@@ -9,7 +9,7 @@
 
 // Core Elements
 body {
-  background: url("../images/dan-otis-final.jpg") no-repeat fixed;
+  background: url("../images/home-page.jpg") no-repeat fixed;
   background-size: cover;
 }
 
@@ -348,7 +348,8 @@ ul {
         color: $gold;
         padding: 10% 5% 10% 5%;
         text-align: center;
-        opacity: 0.4;
+        opacity: 1;
+        border: 3px $cream solid;
         transition: all 0.5s ease;
       }
     }
@@ -397,12 +398,12 @@ ul {
       }
     }
 
-    .middle {
-      .item {
-        border: 3px $cream solid;
-        opacity: 1;
-      }
-    }
+    // .middle {
+    //   .item {
+    //     border: 3px $cream solid;
+    //     opacity: 1;
+    //   }
+    // }
 
     .right-side {
       .rows {

@@ -3,7 +3,7 @@
   padding: 0; }
 
 body {
-  background: url("../images/dan-otis-final.jpg") no-repeat fixed;
+  background: url("../images/home-page.jpg") no-repeat fixed;
   background-size: cover; }
 
 a {
@@ -237,7 +237,8 @@ ul {
         color: #f5d00c;
         padding: 10% 5% 10% 5%;
         text-align: center;
-        opacity: 0.4;
+        opacity: 1;
+        border: 3px #fcf1b3 solid;
         transition: all 0.5s ease; }
     #block-b .container .right-side {
       background: rgba(34, 34, 34, 0.9);
@@ -268,9 +269,6 @@ ul {
   #block-b .container:hover .left-side a {
     visibility: visible;
     color: #f5d00c; }
-  #block-b .container:hover .middle .item {
-    border: 3px #fcf1b3 solid;
-    opacity: 1; }
   #block-b .container:hover .right-side .rows {
     transform: rotateX(360deg);
     width: 75%;
