@@ -9,6 +9,7 @@ Website will use modern HTML for mark up. CSS w/sass will cover all styling for 
 The Goal will be to have this as a Full-stack presentation relying on a MERN Stack and including API calls to various web services and related projects.
 
 # INITIAL SETUP
+
 used npm to create a package-json file.
 File was edited to run sass for auto generating main.css into my /dist folder upon every save.
 dist/ contains the actual project files.
@@ -36,12 +37,15 @@ Using a remote Mongo Hosted DB through Atlas: MongDB atlas.
 Installed mongoose as an ORM for mongo.
 
 # GOOGLE MAPS API
+
 Using Google Maps for JS.
 Qouta set to API usage.
 
-# Javascript files  
-All js files right now are either Ract or vanilla Js.  Client side React has been installed but currently not
-in repo until other projects are ready.  
+# Javascript files
+
+All js files right now are either Ract or vanilla Js. Client side React has been installed but currently not
+in repo until other projects are ready.
 
 # Open Source Images
+
 3 images are used from unsplash.com and credit is given in footer of web page.
