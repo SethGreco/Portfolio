@@ -224,7 +224,7 @@ ul {
           padding-right: 5%;
           display: flex;
           align-content: center;
-          justify-content: end;
+          justify-content: flex-end;
           transition: all 0.2s ease;
           visibility: hidden; }
     #block-b .container .middle {
