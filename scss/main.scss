@@ -9,7 +9,7 @@
 
 // Core Elements
 body {
-  background: url("../images/dan-otis-size-compress.jpg") no-repeat fixed;
+  background: url("../images/dan-otis-final.jpg") no-repeat fixed;
   background-size: cover;
 }
 
@@ -461,7 +461,8 @@ ul {
         button {
           background-color: $gold;
           color: $dark-color;
-          padding: 15px;
+          margin: 5px;
+          padding: 12px;
           border: 3px #e5e5e5 solid;
           border-radius: 10px;
           font-size: 1rem;

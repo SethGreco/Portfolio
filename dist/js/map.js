@@ -9,6 +9,7 @@ async function initMap() {
   });
 
   //Fetch records from mongoDB
+  // using await to make sure data is retreived before displaying map
   let pins = await getData();
 
   //iterate over the records and turn each one into a marker.
@@ -19,7 +20,7 @@ async function initMap() {
     });
   }
 }
-
+//Fetch the DataBase
 function getData() {
   return fetch("https://fierce-crag-41814.herokuapp.com/get").then(response =>
     response.json()
