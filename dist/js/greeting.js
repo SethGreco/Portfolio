@@ -5,7 +5,6 @@ z = new Date();
 
 window.onload = () => {
   time = z.getHours();
-  // console.log(time);
   if (time < 12 && time >= 3) {
     y.innerHTML = "Good Morning";
   } else if (time >= 12 && time <= 18) {
@@ -15,7 +14,7 @@ window.onload = () => {
   }
 };
 
-// Smooth Scrolling
+// Smooth Scrolling for Nav Bar items
 $("#main-nav a").on("click", function(event) {
   if (this.hash !== "") {
     event.preventDefault();

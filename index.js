@@ -15,29 +15,42 @@ app.use(helmet.noSniff()); // set X-Content-Type-Options header
 app.use(helmet.frameguard()); // set X-Frame-Options header
 app.use(helmet.xssFilter()); // set X-XSS-Protection header
 
+// Cross origin corsmiddleware
 app.use(cors());
 app.use(bodyParser.json());
 
+// export models and assigned here to Cords
 const Cords = require("./models/cords");
 
 mongoose.Promise = global.Promise;
+
+// Connection being defined for mongoose
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
+
+// connection variable assigned
 const connection = mongoose.connection;
 
+// Connection being opened to remote Mongo DB
 connection.once("open", function() {
   console.log("MongoDB Connected!");
 });
 
+// included so that node can have access and "see" all my
+// resources being used inside my html & css files.
 app.use(express.static(__dirname + "/dist"));
 
+// base Home page route defined.
 router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
 
+// route for projects file
 router.get("/projects", function(req, res) {
   res.sendFile(path.join(__dirname + "/dist/under_construction.html"));
 });
 
+// Route made to post new records to Remote MongoDB.
+// Cords defined as the model for DB entries
 router.route("/add").post(function(req, res) {
   let location = new Cords(req.body);
   location
@@ -51,6 +64,8 @@ router.route("/add").post(function(req, res) {
     });
 });
 
+// web route made to fetch records out of remote MongoDB.
+// Cords defined as the model for DB entries
 router.route("/get").get(function(req, res) {
   Cords.find(function(err, cords) {
     if (err) {
@@ -61,12 +76,12 @@ router.route("/get").get(function(req, res) {
   });
 });
 
-// 404 handles
+// 404 error handle
 router.get("*", function(req, res) {
   res.sendFile(path.join(__dirname + "/dist/404.html"));
 });
 
-//500 handles
+//500 error handles
 app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send("Something broke!");
@@ -75,4 +90,3 @@ app.use(function(err, req, res, next) {
 app.use("/", router);
 
 app.listen(process.env.PORT || 5000);
-// app.listen(process.env.port || 3000, "0.0.0.0");

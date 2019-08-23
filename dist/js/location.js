@@ -1,8 +1,11 @@
 "use strict";
 
+// React component Class based
 class LikeButton extends React.Component {
+  // Create constructor be sure to call super()
   constructor(props) {
     super(props);
+    // define the variables in state
     this.state = {
       lat: null,
       long: null,
@@ -10,7 +13,8 @@ class LikeButton extends React.Component {
     };
   }
 
-  componentDidMount() {
+  // function to prompt user for their geo position
+  getUserLocation() {
     window.navigator.geolocation.getCurrentPosition(
       position => {
         this.setState({ lat: position.coords.latitude });
@@ -20,21 +24,12 @@ class LikeButton extends React.Component {
     );
   }
 
-  // <button
-  //         onClick={() => {
-  //           this.refreshPage();
-  //         }}
-  //       >
-  //         Reload
-  //       </button>
-  // refreshPage() {
-  //   window.location.reload(false);
-  // }
-
+  // function for the onclick react button.  Well call getUserLocation
+  // then proceed to define a POST method to remote DB
   postCords() {
+    this.getUserLocation();
     const { lat, long } = this.state;
     const loc = { lat, long };
-    // const url = "http://localhost:5000/add";
     const url = "https://fierce-crag-41814.herokuapp.com/add";
     const conf = {
       method: "post",
@@ -71,26 +66,3 @@ class LikeButton extends React.Component {
 
 const domContainer = document.querySelector("#React");
 ReactDOM.render(<LikeButton />, domContainer);
-
-// Vanilla JS code that gets location
-// conflicted with my onload
-/* <script>
-var x = document.getElementById("location");
-var y = document.getElementById("time-stamp");
-z = new Date();
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML =
-    "Latitude: " +
-    position.coords.latitude +
-    "<br>Longitude: " +
-    position.coords.longitude;
-}
-</script> */
