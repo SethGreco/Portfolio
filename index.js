@@ -46,7 +46,7 @@ router.get("/", function(req, res) {
 
 // route for projects file
 router.get("/projects", function(req, res) {
-  res.sendFile(path.join(__dirname + "/dist/under_construction.html"));
+  res.sendFile(path.join(__dirname + "/dist/projects.html"));
 });
 
 // Route made to post new records to Remote MongoDB.
