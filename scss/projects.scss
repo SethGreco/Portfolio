@@ -1,0 +1,158 @@
+@import "variables";
+
+// Reset defaults
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("../images/projects-page.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+.bar {
+  height: 1px;
+  width: 40%;
+  background-color: $light-color;
+  display: block;
+  margin: 12.5% auto 1rem auto;
+}
+.bar-alt {
+  height: 1px;
+  width: 40%;
+  background-color: $light-color;
+  display: block;
+  margin: 7.5% auto 1rem auto;
+}
+
+#main-nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: $dark-color;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  opacity: 1;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  #time-stamp {
+    color: $cream;
+  }
+  h2 {
+    padding-top: 0.5rem;
+    font-size: 1.75rem;
+    margin-left: 5%;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0.5rem 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  a {
+    color: $gold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  li:hover {
+    cursor: pointer;
+    background-color: $cream;
+    border-radius: 5%;
+
+    a {
+      color: $dark-color;
+    }
+  }
+}
+
+#header {
+  height: 95vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-family: "Lato", sans-serif;
+    color: rgb(232, 205, 149);
+    padding-top: 5%;
+    font-size: 3.4rem;
+    position: relative;
+  }
+}
+
+#project-1 {
+  background-color: rgb(225, 202, 166);
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 65% 35%;
+
+  .summary {
+    text-align: left;
+
+    margin: 5%;
+
+    h1 {
+      font-family: "Source Sans Pro", sans-serif;
+      padding: 2.5% 0 2.5% 0;
+      font-size: 2.5rem;
+    }
+    p {
+      font-family: "Lato", sans-serif;
+      line-height: 1.6rem;
+      font-size: 1.1rem;
+      padding-top: 2.5%;
+      padding-bottom: 2.5%;
+    }
+    button {
+      padding: 0.75rem 2rem 0.75rem 2rem;
+      margin: 25px 5px 0 5px;
+      border-radius: 25px;
+      border-color: #222;
+      font-size: 1rem;
+      color: #333;
+      background-color: transparent;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    a:visited {
+      color: #222;
+    }
+    button:hover {
+      background-color: rgb(218, 254, 255);
+      border-color: rgb(34, 96, 252);
+    }
+  }
+
+  .preview {
+    background: url("../images/ScreenShot.jpg") no-repeat;
+    background-size: 75% 75%;
+    background-position: center;
+  }
+}
+
+#project-2 {
+  background-color: #eee;
+
+  height: 50vh;
+
+  .summary {
+    font-size: 2rem;
+    padding: 1.8rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: url("../images/projects-page.jpg") no-repeat fixed;
+  background-size: cover; }
+
+.bar {
+  height: 1px;
+  width: 40%;
+  background-color: #f4f4f4;
+  display: block;
+  margin: 12.5% auto 1rem auto; }
+
+.bar-alt {
+  height: 1px;
+  width: 40%;
+  background-color: #f4f4f4;
+  display: block;
+  margin: 7.5% auto 1rem auto; }
+
+#main-nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #222;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  opacity: 1;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold; }
+  #main-nav #time-stamp {
+    color: #fcf1b3; }
+  #main-nav h2 {
+    padding-top: 0.5rem;
+    font-size: 1.75rem;
+    margin-left: 5%; }
+  #main-nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 3%; }
+  #main-nav li {
+    display: inline-block;
+    margin: 0.5rem 0.75rem;
+    padding: 0.5rem 0.75rem; }
+  #main-nav a {
+    color: #f5d00c;
+    text-transform: uppercase;
+    text-decoration: none; }
+  #main-nav li:hover {
+    cursor: pointer;
+    background-color: #fcf1b3;
+    border-radius: 5%; }
+    #main-nav li:hover a {
+      color: #222; }
+
+#header {
+  height: 95vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #header p {
+    font-family: "Lato", sans-serif;
+    color: #e8cd95;
+    padding-top: 5%;
+    font-size: 3.4rem;
+    position: relative; }
+
+#project-1 {
+  background-color: #e1caa6;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 65% 35%; }
+  #project-1 .summary {
+    text-align: left;
+    margin: 5%; }
+    #project-1 .summary h1 {
+      font-family: "Source Sans Pro", sans-serif;
+      padding: 2.5% 0 2.5% 0;
+      font-size: 2.5rem; }
+    #project-1 .summary p {
+      font-family: "Lato", sans-serif;
+      line-height: 1.6rem;
+      font-size: 1.1rem;
+      padding-top: 2.5%;
+      padding-bottom: 2.5%; }
+    #project-1 .summary button {
+      padding: 0.75rem 2rem 0.75rem 2rem;
+      margin: 25px 5px 0 5px;
+      border-radius: 25px;
+      border-color: #222;
+      font-size: 1rem;
+      color: #333;
+      background-color: transparent; }
+      #project-1 .summary button a {
+        text-decoration: none; }
+    #project-1 .summary a:visited {
+      color: #222; }
+    #project-1 .summary button:hover {
+      background-color: #dafeff;
+      border-color: #2260fc; }
+  #project-1 .preview {
+    background: url("../images/ScreenShot.jpg") no-repeat;
+    background-size: 75% 75%;
+    background-position: center; }
+
+#project-2 {
+  background-color: #eee;
+  height: 50vh; }
+  #project-2 .summary {
+    font-size: 2rem;
+    padding: 1.8rem;
+    text-align: center; }

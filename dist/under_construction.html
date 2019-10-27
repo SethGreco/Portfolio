@@ -4,26 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300|Source+Sans+Pro|Open+Sans:700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/projects.css" />
     <title>Under Construction</title>
-    <style>
-      body {
-        background: url("../images/projects-page.jpg") no-repeat fixed;
-        background-size: cover;
-      }
-
-      p {
-        text-align: center;
-        padding-top: 2.5%;
-        font-size: 2rem;
-        color: #f5d00c;
-        font-weight: bold;
-      }
-    </style>
   </head>
   <body>
-    <p>
-      This section is currently under construction. <br />
-      Coming soon!
-    </p>
+    <!-- Nav -->
+    <nav id="main-nav">
+      <h2 id="time-stamp"></h2>
+      <ul>
+        <li><a href="#header-main" class="current">Home</a></li>
+      </ul>
+    </nav>
+
+    <div id="header">
+      <div class="bar"></div>
+      <p>Projects & Applications</p>
+      <div class="bar-alt"></div>
+    </div>
+    <div id="project-1">
+      <div class="summary">
+        <h1>DayStarter (Work-in-progress)</h1>
+        <p>
+          Day Starter is a quick web app I built to play around with web
+          services and generate some data that would be useful to the end user.
+          It gives the user (based on their location) the current weather,
+          traffic map and news articles. Currently it is still a
+          Work-in-progress but core componenets are functional and interactive.
+        </p>
+        <h3>
+          Tech-Stack:<span>
+            Javascript, HTML5, MaterializeCSS, nodeJS/Express</span
+          >
+        </h3>
+        <br />
+        <button>
+          <a href="https://github.com/SethGreco/DayStarter">Github</a>
+        </button>
+        <button>
+          <a href="https://evening-anchorage-28837.herokuapp.com/"> Demo</a>
+        </button>
+      </div>
+      <div class="preview"></div>
+    </div>
+    <!-- <div id="project-2">
+      <p class="summary">This is project 2 which should be displayed</p>
+    </div> -->
+
+    <script src="./js/greeting.js"></script>
   </body>
 </html>
