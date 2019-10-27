@@ -56,7 +56,7 @@ ul {
 
 #header-main {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   font-family: "EB Garamond", serif; }
   #header-main .container {
     display: flex;
@@ -90,7 +90,7 @@ ul {
       color: #228b22; }
 
 #block-a {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0% 2% 7.5% 2%; }
   #block-a .header-a {
     text-align: center;
@@ -191,7 +191,7 @@ ul {
     transform: translateX(104.05%); }
 
 #block-b {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2% 2% 7.5% 2%; }
   #block-b a {
     pointer-events: none;
@@ -281,7 +281,7 @@ ul {
     color: #f5d00c; }
 
 #block-c {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2% 2% 7.5% 2%; }
   #block-c .header-c {
     text-align: center;

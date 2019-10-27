@@ -145,14 +145,5 @@ body {
   }
 }
 
-#project-2 {
-  background-color: #eee;
-
-  height: 50vh;
-
-  .summary {
-    font-size: 2rem;
-    padding: 1.8rem;
-    text-align: center;
-  }
-}
+// Import Media Queries
+@import "mediaProj";

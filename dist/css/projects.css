@@ -108,10 +108,39 @@ body {
     background-size: 75% 75%;
     background-position: center; }
 
-#project-2 {
-  background-color: #eee;
-  height: 50vh; }
-  #project-2 .summary {
-    font-size: 2rem;
-    padding: 1.8rem;
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center; }
+    #main-nav ul {
+      margin-right: 0; }
+  #header {
     text-align: center; }
+    #header .bar {
+      margin: 45% auto 1rem auto; }
+  #project-1 {
+    grid-template-columns: 1fr;
+    height: 625px; }
+    #project-1 .summary {
+      text-align: center;
+      height: 300px;
+      padding: 2.5%; }
+      #project-1 .summary h1 {
+        font-size: 1.25rem; }
+      #project-1 .summary p {
+        font-size: 0.75rem; }
+      #project-1 .summary h3 {
+        font-size: 0.85rem; }
+      #project-1 .summary button {
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem; }
+    #project-1 .preview {
+      height: 300px;
+      background-size: 250px 200px; } }
+
+@media (max-height: 580px) {
+  #project-1 {
+    height: 400px; }
+    #project-1 .summary h1 {
+      font-size: 1.75rem; }
+    #project-1 .summary p {
+      font-size: 0.75rem; } }
