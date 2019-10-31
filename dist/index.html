@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:700&display=swap" rel="stylesheet">  
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300|Source+Sans+Pro|Open+Sans:700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <script
       src="https://unpkg.com/react@16/umd/react.development.js"
@@ -27,7 +30,6 @@
         <li><a href="#block-a">About</a></li>
         <li><a href="#block-c">Map</a></li>
         <li>
-          
           <a href="https://www.grecowebdev.com/projects">Projects</a>
         </li>
       </ul>
@@ -35,148 +37,131 @@
 
     <!-- Header Tag -->
     <section id="header-main">
-      
       <div class="container">
-        
-        <h1><span class="h-tag-1">Full-Stack</span> Web Developer:</h1>
-        <h1>Always <span class="h-tag-2">Growing</span></h1>
+        <div id="bar-above"></div>
+        <p><span class="h-tag-1">Full-Stack</span> Web Developer:</p>
+        <p>Always <span class="h-tag-2">Growing</span></p>
+        <div id="bar-below"></div>
         <div class="item-links">
           <a
             href="mailto:slagreco@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
-            ><i class="far fa-envelope "></i>
+            ><i class="far fa-envelope fa-2x"></i>
             </i
           ></a>
           <a
             href="https://github.com/SethGreco"
             rel="noopener noreferrer"
             target="_blank"
-            ><i class="fab fa-github"></i
+            ><i class="fab fa-github fa-2x"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/seth-greco-483150a3/"
             rel="noopener noreferrer"
             target="_blank"
-            ><i class="fab fa-linkedin"></i
+            ><i class="fab fa-linkedin fa-2x"></i
           ></a>
         </div>
       </div>
-      
     </section>
 
     <!-- Synopsis About -->
     <section id="block-a">
-      <h2 class="header-a">About Me</h2>
-      <div class="container">
-        <div class="home-about sec">
-          <h1>Seth Greco.</h1>
-          <h2>Full-Stack Engineer.</h2>
-          <h3>Web Designer</h3>
-          <h4>&</h4>
-          <h4>Part-time Outdoorsman</h4>
-        </div>
-
-        <div class="description sec">
-          <div class="summary">
-            &nbsp; I am a recent graduate from the University of Texas at San Antonio,
-            having obtained a degree in Computer Science with a concentration in software engineering.
-            Through my studies I found web-development to be the most compelling & fun the tech field has to offer.<br/><br/>
-            &nbsp; I am a full stack developer using my experince
-            with languages Python & Java, frameworks such as Django & Express, & Libraries like React.
-            &
-            HTML, CSS, Javascript, Mysql, MongoDB & other web related
-            technologies to make a robust skillset.
-          </div>
-          <h4 class="build-stack">This Website was built using MERN stack.</h3>
-        </div>
-        <div class="lines line-1 sec"></div>
-        <div class="lines line-2 sec"></div>
-        <div class="lines line-3 sec"></div>
-        <div class="lines line-4 sec"></div>
-        <div class="lines line-5 sec"></div>
-        <div class="lines line-6 sec"></div>
-        <div class="lines line-7 sec"></div>
-        <div class="lines line-8 sec"></div>
-        <div class="lines line-9 sec"></div>
-        <div class="lines line-10 sec"></div>
-        <div class="lines line-11 sec"></div>
-        <div class="lines line-12 sec"></div>
-        <div class="lines line-13 sec"></div>
-        <div class="lines line-14 sec"></div>
-        <div class="lines line-15 sec"></div>
-        <div class="lines line-16 sec"></div>
+      <div class="title-box">
+        <h2 class="header-a">About</h2>
+        <div id="underline"></div>
       </div>
+      <div class="container">
+        <div class="summary">
+          <h1>Seth Greco &nbsp;&nbsp; Full-Stack    Engineer &nbsp;&nbsp; Web Developer</h1>
+          &nbsp;I am a recent graduate from the University of Texas at San Antonio,
+          having obtained a degree in Computer Science with a concentration in software engineering.
+          Through my studies I found web-development to be the most compelling & fun the tech field has to offer.
+          &nbsp; I am a full stack developer using my experince
+          with languages Python & Java, frameworks such as Django & Express, & Libraries like React.
+          &
+          HTML, CSS, Javascript, Mysql, MongoDB & other web related
+          technologies to make a robust skillset.
+          </div>
+        </div>  
+      <div id="bar-below"></div> 
     </section>
 
-    <!-- Animation Left Side Box & Languages Right Side ... Proficiency -->
+    
+    <!-- Proficiency -->
     <section id="block-b" class="text-center">
-      <h2 class="header-b">Languages & Libaries Experience</h2>
+      <div class="title-box">
+        <h2 class="header-b">Proficiency</h2>
+        <div id="underline"></div>
+      </div>
       <div class="container">
-        <!-- Left side of Container with columns animation -->
-        <div class="left-side">
-          <div class="rows">
-            <a href="#" class="row-text menu1">Python</a>
+        <div class="item">
+          <div class="image-content">
+            <i class="fab fa-python fa-2x"></i>
           </div>
-          <div class="rows">
-            <a href="#" class="row-text menu2">CSS3</a>
+          <div class="text-content">
+            <div class="mastery-bar python"><h4>Python</h4>
           </div>
-          <div class="rows">
-            <a href="#" class="row-text menu3">React</a>
+          <h4 class="percent">75%</h4>
+        </div>
+        </div>
+        <div class="item">
+          <div class="image-content">
+            <i class="fab fa-java fa-2x"></i>
           </div>
-          <div class="rows">
-            <a href="#" class="row-text menu4">NodeJS</a>
+          <div class="text-content">
+            <div class="mastery-bar java"><h4>Java</h4></div>
+            <h4 class="percent">85%</h4>
           </div>
         </div>
-
-        <div class="middle">
-          <div class="item icon1">
-            <i class="fab fa-python fa-3x"></i>
+        <div class="item">
+          <div class="image-content dbl">
+            <i class="fab fa-css3-alt fa-2x"></i>
+            <i class="fab fa-html5 fa-2x"></i>
           </div>
-          <div class="item icon2">
-            <i class="fab fa-java fa-3x"></i>
+          <div class="text-content">
+            <div class="mastery-bar html"><h4>HTML5 / CSS3</h4></div>
+            <h4 class="percent">80%</h4>
+          </div> 
+        </div>
+        <div class="item">
+          <div class="image-content">
+            <i class="fab fa-js fa-2x"></i>
           </div>
-          <div class="item icon3">
-            <i class="fab fa-css3-alt fa-3x"></i>
-          </div>
-          <div class="item icon4">
-            <i class="fab fa-html5 fa-3x"></i>
-          </div>
-          <div class="item icon5">
-            <i class="fab fa-react fa-3x"></i>
-          </div>
-          <div class="item icon6">
-            <i class="fab fa-sass fa-3x"></i>
-          </div>
-          <div class="item icon7">
-            <i class="fab fa-node-js fa-3x"></i>
-          </div>
-          <div class="item icon8">
-            <i class="fab fa-js fa-3x"></i>
+          <div class="text-content">
+            <div class="mastery-bar javascript"><h4>Javascript</h4></div>
+            <h4 class="percent">65%</h4>
           </div>
         </div>
-
-        <!-- Right side of container with icons and hover activation -->
-        <div class="right-side">
-          <div class="rows">
-            <a href="#" class="row-text menu5">Java</a>
+        <div class="item">
+          <div class="image-content">
+            <i class="fab fa-react fa-2x"></i>
           </div>
-          <div class="rows">
-            <a href="#" class="row-text menu6">HTML5</a>
+          <div class="text-content">
+            <div class="mastery-bar react"><h4>React</h4></div>
+            <h4 class="percent">55%</h4>
           </div>
-          <div class="rows">
-            <a href="#" class="row-text menu7">Sass</a>
+        </div>
+        <div class="item">
+          <div class="image-content">
+            <i class="fab fa-node-js fa-2x"></i>
           </div>
-          <div class="rows">
-            <a href="#" class="row-text menu8">Javascript</a>
+          <div class="text-content">
+            <div class="mastery-bar node"><h4>Nodejs</h4></div>
+            <h4 class="percent">50%</h4>
           </div>
         </div>
       </div>
+      <div id="bar-below"></div> 
     </section>
 
     <!-- Vistor Locations & Map Markers  -->
     <section id="block-c">
-        <h2 class="header-c">Visitor Map</h2>
+        <div class="title-box">
+          <h2 class="header-c">Vistor Map</h2>
+          <div id="underline"></div>
+        </div>
       <div class="container">
         <div class="map"></div>
         <div class="left-side-text">
@@ -187,7 +172,6 @@
             Don't worry I am not taking any other information from you.
           </p>
           <div id="React"></div>
-          
         </div>
       </div>
     </section>
@@ -200,7 +184,7 @@
           Copyright &copy 2019, All rights reserved
         </h4>
         <h6 class="tooltip">Sources
-            <span class="tooltiptext">Open source images provided by Dan Otis, Andrew Neel ,& Todd Quackenbush from unsplash.com</span>
+          <span class="tooltiptext">Open source images provided by Dan Otis, Andrew Neel ,& Todd Quackenbush from unsplash.com</span>
         </h6>
         <div class="item-links">
           <a

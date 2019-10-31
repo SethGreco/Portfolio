@@ -10,71 +10,77 @@
   }
 
   #block-a {
-    pointer-events: none;
-    padding: 0 2% 12.5% 2%;
-    .container {
-      .lines {
-        height: 1rem;
+    padding: 0% 5% 7.5% 5%;
+    .title-box {
+      .header-a {
+        font-size: 2rem;
+      }
+      #underline {
+        width: 5.5rem;
       }
     }
-  }
-
-  #block-b {
-    pointer-events: none;
-    padding: 0 2% 12.5% 2%;
     .container {
-      .left-side {
-        .rows {
-          background-color: $dark-color;
-          width: 75%;
-          a {
-            visibility: visible;
-          }
+      .summary {
+        font-size: 1rem;
+        h1 {
+          font-size: 1.5rem;
         }
       }
-
-      .middle {
-        .item {
-          border: 3px $cream solid;
-          opacity: 1;
-        }
+    }
+    #bar-below {
+      width: 20rem;
+    }
+  }
+  #block-b {
+    padding: 0% 5% 7.5% 5%;
+    .title-box {
+      .header-b {
+        font-size: 2rem;
       }
-
-      .right-side {
-        .rows {
-          background-color: $dark-color;
-          width: 75%;
-          margin-left: 25%;
-        }
-        a {
-          visibility: visible;
-        }
+      #underline {
+        width: 9.5rem;
       }
+    }
+    #bar-below {
+      width: 20rem;
     }
   }
 
   #block-c {
+    padding: 0% 5% 15% 5%;
+    .title-box {
+      .header-c {
+        font-size: 2rem;
+      }
+      #underline {
+        width: 9rem;
+      }
+    }
     .container {
-      .left-side-text {
-        .vistor-text {
-          font-size: 1.3rem;
-        }
-        #React {
-          padding-top: 20%;
-        }
+      .map {
+        min-height: 0;
+        height: 400px;
       }
     }
   }
-
   #footer {
     h4 {
-      font-size: 1rem;
+      font-size: 0.75rem;
+    }
+    .container .tooltip {
+      font-size: 0.75rem;
     }
   }
 }
 
 // Smartphone format
 @media (max-width: 500px) {
+  #bar-above {
+    width: 18rem;
+  }
+  #bar-below {
+    width: 18rem;
+  }
   // nav bar
   #main-nav {
     flex-direction: column;
@@ -86,7 +92,7 @@
   // header
   #header-main {
     height: 100vh;
-    h1 {
+    p {
       font-size: 2.5rem;
     }
   }
@@ -96,85 +102,63 @@
   #block-c {
     padding: 0 0 20% 0;
   }
-  #block-a .header-a {
-    height: 35px;
-    padding-bottom: 5%;
-    font-size: 2.25rem;
-  }
-  #block-b .header-b {
-    height: 70px;
-    padding-bottom: 10%;
-    font-size: 2.25rem;
-  }
-  #block-c .header-c {
-    height: 35px;
-    padding-bottom: 5%;
-    font-size: 2.25rem;
-  }
 
   // About me
-  #block-a .container {
-    grid-template-columns: 1fr;
-    grid-column-gap: 0;
+  #block-a {
+    .title-box {
+      margin-left: 0;
 
-    .lines {
-      height: 0;
-      width: 0;
+      .header-a {
+        height: 35px;
+        text-align: center;
+        padding-bottom: 1%;
+        font-size: 1.75rem;
+      }
+
+      #underline {
+        height: 1px;
+        width: 8.5rem;
+        margin-left: 33%;
+        margin-bottom: 1rem;
+      }
     }
 
-    .home-about,
-    .description {
-      border-radius: 0;
-      padding-top: 5%;
+    .container {
+      .summary {
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 20%;
+        h1 {
+          font-size: 1.25rem;
+          text-align: center;
+        }
+      }
     }
   }
 
   // Languages and experience
   #block-b {
+    .title-box {
+      margin-left: 0;
+      .header-b {
+        height: 35px;
+        text-align: center;
+        padding-bottom: 1%;
+        font-size: 1.75rem;
+      }
+      #underline {
+        height: 1px;
+        width: 8.5rem;
+        margin-left: 33%;
+        margin-bottom: 1rem;
+      }
+    }
     .container {
-      grid-template-columns: 1fr;
-      pointer-events: none;
-      .left-side {
-        background-color: $dark-green;
-        flex-direction: row;
-        height: auto;
-        .rows {
-          background-color: $dark-green;
-          width: auto;
-          font-size: 1.3rem;
-          transition: unset;
-          a {
-            padding-right: 0;
-            transition: unset;
-            visibility: visible;
-          }
-        }
-      }
-
-      .middle {
-        grid-gap: 0;
-        .item {
-          padding: auto;
-          opacity: 1;
-          border: 1px $cream solid;
-          transition: unset;
-        }
-      }
-
-      .right-side {
-        background-color: $dark-green;
-        flex-direction: row;
-        height: auto;
-        .rows {
-          background-color: $dark-green;
-          width: auto;
-          font-size: 1.3rem;
-          transition: unset;
-          margin-left: 0;
-          a {
-            padding-right: 0;
-            transition: unset;
-            visibility: visible;
+      padding-bottom: 20%;
+      .item {
+        .image-content {
+          .fa-css3-alt {
+            display: none;
           }
         }
       }
@@ -182,20 +166,38 @@
   }
 
   // vistor map
-  #block-c .container {
-    grid-template-columns: 1fr;
+  #block-c {
+    .title-box {
+      margin-left: 0;
 
-    .left-side-text .vistor-text {
-      font-size: 1.5rem;
-      padding-top: 5%;
-    }
-    .left-side-text #React {
-      padding-top: 2.5%;
-      padding-bottom: 3%;
-    }
+      .header-c {
+        height: 35px;
+        text-align: center;
+        padding-bottom: 1%;
+        font-size: 1.75rem;
+      }
 
-    .map {
-      min-height: 300px;
+      #underline {
+        height: 1px;
+        width: 8.5rem;
+        margin-left: 33%;
+      }
+    }
+    .container {
+      grid-template-columns: 1fr;
+
+      .left-side-text .vistor-text {
+        font-size: 1.1rem;
+        padding-top: 5%;
+      }
+      .left-side-text #React {
+        padding-top: 2.5%;
+        padding-bottom: 3%;
+      }
+
+      .map {
+        min-height: 300px;
+      }
     }
   }
 
@@ -229,75 +231,158 @@
 
 // Landscapes
 @media (max-height: 580px) {
-  body {
-    pointer-events: none;
+  #bar-above {
+    width: 24rem;
+  }
+  #bar-below {
+    width: 24rem;
+  }
+
+  #header-main {
+    p {
+      font-size: 2.1rem;
+    }
+  }
+  #block-a {
+    .title-box {
+      .header-a {
+        font-size: 1.8rem;
+      }
+      #underline {
+        width: 5rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .container {
+      .summary {
+        font-size: 1rem;
+        h1 {
+          font-size: 1.25rem;
+        }
+      }
+    }
   }
   #block-b {
+    .title-box {
+      .header-b {
+        font-size: 1.8rem;
+      }
+      #underline {
+        width: 9rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  #block-c {
+    .title-box {
+      margin-left: 0;
+      .header-c {
+        font-size: 1.8rem;
+      }
+      #underline {
+        width: 8rem;
+        margin-bottom: 1rem;
+      }
+    }
     .container {
-      .left-side {
-        .rows {
-          background-color: $dark-color;
-          width: 75%;
-          a {
-            visibility: visible;
+      .left-side-text {
+        .vistor-text {
+          font-size: 1rem;
+          padding-top: 0%;
+          line-height: 1.5rem;
+        }
+        #React {
+          margin-top: 1%;
+          padding-top: 2%;
+          button {
+            padding: 10px;
+            margin: 3px;
           }
         }
       }
-
-      .middle {
-        .item {
-          border: 1px $cream solid;
-          opacity: 1;
-        }
-      }
-
-      .right-side {
-        .rows {
-          background-color: $dark-color;
-          width: 75%;
-          margin-left: 25%;
-        }
-        a {
-          visibility: visible;
-        }
+      .map {
+        min-height: 0;
+        height: 300px;
       }
     }
   }
 }
 
 @media (max-height: 330px) {
-  body {
-    pointer-events: none;
+  #bar-above {
+    width: 24rem;
+  }
+  #bar-below {
+    width: 24rem;
   }
 
-  #block-b {
+  #header-main {
+    p {
+      font-size: 2.1rem;
+    }
+  }
+  #block-a {
+    .title-box {
+      .header-a {
+        font-size: 1.8rem;
+      }
+      #underline {
+        width: 5rem;
+        margin-bottom: 1rem;
+      }
+    }
     .container {
-      .left-side {
-        .rows {
-          background-color: $dark-color;
-          width: 75%;
-          a {
-            visibility: visible;
+      .summary {
+        font-size: 1rem;
+        h1 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+  #block-b {
+    .title-box {
+      .header-b {
+        font-size: 1.8rem;
+      }
+      #underline {
+        width: 8rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  #block-c {
+    .title-box {
+      margin-left: 0;
+      .header-c {
+        font-size: 1.8rem;
+      }
+      #underline {
+        width: 8rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .container {
+      .left-side-text {
+        .vistor-text {
+          font-size: 1rem;
+          padding-top: 0%;
+          line-height: 1.5rem;
+        }
+        #React {
+          margin-top: 1%;
+          padding-top: 2%;
+          button {
+            padding: 10px;
+            margin: 3px;
           }
         }
       }
-
-      .middle {
-        .item {
-          border: 1px $cream solid;
-          opacity: 1;
-        }
-      }
-
-      .right-side {
-        .rows {
-          background-color: $dark-color;
-          width: 75%;
-          margin-left: 25%;
-        }
-        a {
-          visibility: visible;
-        }
+      .map {
+        min-height: 0;
+        height: 300px;
       }
     }
   }
@@ -305,51 +390,55 @@
 
 @media (min-width: 1900px) {
   #block-a {
-    padding: 0 5% 7.5% 5%;
-    align-content: center;
-
-    .header-a {
-      font-size: 3.25rem;
+    padding: 0 15% 7.5% 15%;
+    .title-box {
+      .header-a {
+        font-size: 2.5rem;
+      }
+      #underline {
+        width: 6.75rem;
+      }
     }
     .container {
-      .home-about {
-        line-height: 3.5rem;
-        h1 {
-          font-size: 3.5rem;
-        }
-        h2 {
-          font-size: 3rem;
-        }
-        h3 {
-          font-size: 2.5rem;
-        }
-        h4 {
-          font-size: 1.8rem;
-        }
-      }
-      .description {
-        .summary {
-          font-size: 1.5rem;
-        }
+      .summary {
+        font-size: 1.25rem;
 
-        .build-stack {
-          padding-top: 15%;
-          font-size: 1.2rem;
+        h1 {
+          font-size: 1.75rem;
         }
       }
     }
   }
 
   #block-b {
-    padding: 0 5% 7.5% 5%;
-    .header-b {
-      font-size: 3.25rem;
+    padding: 0 15% 7.5% 15%;
+    .title-box {
+      .header-b {
+        font-size: 2.5rem;
+      }
+      #underline {
+        width: 12rem;
+      }
     }
   }
+
   #block-c {
-    padding: 0 5% 7.5% 5%;
-    .header-c {
-      font-size: 3.25rem;
+    padding: 0 15% 7.5% 15%;
+    .title-box {
+      .header-c {
+        font-size: 2.5rem;
+      }
+      #underline {
+        width: 11rem;
+      }
+    }
+
+    .container {
+      .left-side-text {
+        .vistor-text {
+          font-size: 1.3rem;
+        }
+      }
     }
   }
 }
