@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const keys = require("./config/keys");
+const keys = require("../config/keys");
 const path = require("path");
 const router = express.Router();
 const cors = require("cors");
@@ -20,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 // export models and assigned here to Cords
-const Cords = require("./models/cords");
+const Cords = require("../models/cords");
 // const { request } = require("http");
 
 mongoose.Promise = global.Promise;
@@ -40,16 +40,16 @@ connection.once("open", function() {
 
 // included so that node can have access and "see" all my
 // resources being used inside my html & css files.
-app.use(express.static(__dirname + "/dist"));
+app.use(express.static("../dist"));
 
 // base Home page route defined.
 router.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname + "/index.html"));
+  res.sendFile(path.join("../index.html"));
 });
 
 // route for projects file
 router.get("/projects", function(req, res) {
-  res.sendFile(path.join(__dirname + "/dist/projects.html"));
+  res.sendFile(path.join("../dist/projects.html"));
 });
 
 // Route made to post new records to Remote MongoDB.
@@ -96,7 +96,7 @@ router.get("/photos", function(req, res) {
 
 // 404 error handle
 router.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname + "/dist/404.html"));
+  res.sendFile(path.join("../dist/404.html"));
 });
 
 //500 error handles
