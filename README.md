@@ -2,6 +2,10 @@
 
 My Professional Portfolio Web Developer Website. Includes elements of HTML, CSS (w/ Sass) and Node. Under Construction
 
+# Purpose
+
+My first attempt at a portfolio page with full-stack development in mind. Use the skills I have learned and establish this project as a foundation in which I can add to in the future.
+
 # HTML5 & CSS3
 
 Website will use modern HTML for mark up. CSS w/sass will cover all styling for landing page.
@@ -49,3 +53,8 @@ in repo until other projects are ready.
 # Open Source Images
 
 3 images are used from unsplash.com and credit is given in footer of web page.
+
+# Project additions
+
+Backend route added that calls the flickr API to generate a list of photos from my photography collection.
+Project will be incorporated to codebase once bundled.

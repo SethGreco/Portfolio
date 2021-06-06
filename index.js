@@ -4,10 +4,10 @@ const app = express();
 const mongoose = require("mongoose");
 const keys = require("./config/keys");
 const path = require("path");
-const bodyParser = require("body-parser");
 const router = express.Router();
 const cors = require("cors");
 const helmet = require("helmet");
+const request = require("request");
 
 app.use(helmet.hidePoweredBy({ setTo: "DummyServer 1.0" })); //change value of X-Powered-By header to given value
 app.use(helmet.noCache({ noEtag: true })); //set Cache-Control header
@@ -17,15 +17,18 @@ app.use(helmet.xssFilter()); // set X-XSS-Protection header
 
 // Cross origin corsmiddleware
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 // export models and assigned here to Cords
 const Cords = require("./models/cords");
+// const { request } = require("http");
 
 mongoose.Promise = global.Promise;
 
 // Connection being defined for mongoose
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
+mongoose.connect(keys.mongoURI, 
+                { useNewUrlParser: true, 
+                  useUnifiedTopology: true });
 
 // connection variable assigned
 const connection = mongoose.connection;
@@ -72,6 +75,21 @@ router.route("/get").get(function(req, res) {
       console.log(err);
     } else {
       res.json(cords);
+    }
+  });
+});
+
+
+router.get("/photos", function(req, res) {
+
+  let url = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${keys.flickrAPI}&user_id=193082487@N03&tags=${req.query.st}&format=json&nojsoncallback=true`;
+
+  request(url, function(err, response, body) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Flickr API request sent");
+      res.send(body);
     }
   });
 });
