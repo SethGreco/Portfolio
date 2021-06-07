@@ -76,6 +76,21 @@ router.route("/get").get(function(req, res) {
   });
 });
 
+// Route for flickr API call.
+router.get("/photos", function(req, res) {
+
+  let url = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${keys.flickrAPI}&user_id=193082487@N03&tags=${req.query.st}&format=json&nojsoncallback=true`;
+
+  request(url, function(err, response, body) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Flickr API request sent");
+      res.send(body);
+    }
+  });
+});
+
 // 404 error handle
 router.get("*", function(req, res) {
   res.sendFile(path.join(__dirname + "/dist/404.html"));
