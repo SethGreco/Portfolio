@@ -19,6 +19,8 @@ app.use(helmet.xssFilter()); // set X-XSS-Protection header
 app.use(cors());
 app.use(express.json());
 
+// define root directory
+let rootPath = '/Users/sethgreco/web-dev/Portfolio.SethGreco/dist/';
 // export models and assigned here to Cords
 const Cords = require("../models/cords");
 // const { request } = require("http");
@@ -40,16 +42,17 @@ connection.once("open", function() {
 
 // included so that node can have access and "see" all my
 // resources being used inside my html & css files.
-app.use(express.static("../dist"));
+app.use(express.static(rootPath));
+
 
 // base Home page route defined.
 router.get("/", function(req, res) {
-  res.sendFile(path.join("../index.html"));
+  res.sendFile('index.html',{'root': rootPath});
 });
 
 // route for projects file
 router.get("/projects", function(req, res) {
-  res.sendFile(path.join("../dist/projects.html"));
+  res.sendFile('projects.html',{'root': rootPath});
 });
 
 // Route made to post new records to Remote MongoDB.
@@ -96,7 +99,7 @@ router.get("/photos", function(req, res) {
 
 // 404 error handle
 router.get("*", function(req, res) {
-  res.sendFile(path.join("../dist/404.html"));
+  res.sendFile('404.html',{'root': rootPath});
 });
 
 //500 error handles
