@@ -10,6 +10,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "server": "nodemon index.js",
+    "build": "webpack",
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "dev": "concurrently \"npm run server\" \"npm run sass\" "
   },
