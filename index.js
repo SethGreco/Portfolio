@@ -47,6 +47,10 @@ router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
 
+router.get("/gallery", function(req, res) {
+  res.sendFile(path.join(__dirname + "/gallery/index.html"))
+})
+
 // route for projects file
 router.get("/projects", function(req, res) {
   res.sendFile(path.join(__dirname + "/dist/projects.html"));
@@ -95,8 +99,8 @@ router.get("/photos", function(req, res) {
 });
 
 // 404 error handle
-router.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname + "/dist/404.html"));
+router.use(function(req, res, next) {
+  res.status(404).sendFile(path.join(__dirname + "/dist/404.html"));
 });
 
 //500 error handles
