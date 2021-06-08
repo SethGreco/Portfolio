@@ -70,40 +70,42 @@ body {
     font-size: 3.4rem;
     position: relative; }
 
-#project-1 {
-  background-color: #e1caa6;
-  height: 60vh;
-  display: grid;
-  grid-template-columns: 65% 35%; }
-  #project-1 .summary {
-    text-align: left;
-    margin: 5%; }
-    #project-1 .summary h1 {
+#project {
+  height: 60vh; }
+  #project .summary {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 2.5% 5% 0 5%; }
+    #project .summary h1 {
       font-family: "Source Sans Pro", sans-serif;
-      padding: 2.5% 0 2.5% 0;
+      color: #e8cd95;
+      padding: 1.5% 0 1.5% 0;
       font-size: 2.5rem; }
-    #project-1 .summary p {
+    #project .summary p {
       font-family: "Lato", sans-serif;
       line-height: 1.6rem;
       font-size: 1.1rem;
-      padding-top: 2.5%;
-      padding-bottom: 2.5%; }
-    #project-1 .summary button {
+      color: #feee96;
+      padding: 1% 15% 2.5% 15%; }
+    #project .summary h3 {
+      color: #fea900; }
+    #project .summary button {
       padding: 0.75rem 2rem 0.75rem 2rem;
-      margin: 25px 5px 0 5px;
+      margin: 25px 5px 20px 5px;
       border-radius: 25px;
-      border-color: #222;
+      border-color: #187856;
       font-size: 1rem;
       color: #333;
       background-color: transparent; }
-      #project-1 .summary button a {
-        text-decoration: none; }
-    #project-1 .summary a:visited {
-      color: #222; }
-    #project-1 .summary button:hover {
-      background-color: #dafeff;
+      #project .summary button a {
+        text-decoration: none;
+        color: #26ffb3; }
+    #project .summary button:hover {
+      background-color: #5292ff;
       border-color: #2260fc; }
-  #project-1 .preview {
+      #project .summary button:hover a {
+        color: #ffff26; }
+  #project .preview {
     background: url("../images/ScreenShot.jpg") no-repeat;
     background-size: 75% 75%;
     background-position: center; }
