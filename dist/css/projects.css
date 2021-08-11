@@ -58,7 +58,7 @@ body {
 
 #header {
   height: 95vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -71,40 +71,34 @@ body {
     position: relative; }
 
 #project {
-  height: 60vh; }
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.6); }
   #project .summary {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin: 2.5% 5% 0 5%; }
+    text-align: center; }
     #project .summary h1 {
       font-family: "Source Sans Pro", sans-serif;
-      color: #e8cd95;
+      color: #b6d9ff;
       padding: 1.5% 0 1.5% 0;
-      font-size: 2.5rem; }
+      font-size: 2rem; }
     #project .summary p {
       font-family: "Lato", sans-serif;
       line-height: 1.6rem;
-      font-size: 1.1rem;
-      color: #feee96;
-      padding: 1% 15% 2.5% 15%; }
-    #project .summary h3 {
-      color: #fea900; }
-    #project .summary button {
-      padding: 0.75rem 2rem 0.75rem 2rem;
-      margin: 25px 5px 20px 5px;
-      border-radius: 25px;
-      border-color: #187856;
       font-size: 1rem;
-      color: #333;
-      background-color: transparent; }
-      #project .summary button a {
-        text-decoration: none;
-        color: #26ffb3; }
-    #project .summary button:hover {
-      background-color: #5292ff;
-      border-color: #2260fc; }
-      #project .summary button:hover a {
-        color: #ffff26; }
+      color: #fcf1b3;
+      padding: 1% 20% 2.5% 20%; }
+    #project .summary h3 {
+      color: #f5d00c; }
+    #project .summary a {
+      text-align: center; }
+      #project .summary a i {
+        color: #fff;
+        margin-right: 1rem;
+        border: 1px #fff transparent;
+        line-height: 25px;
+        padding: 0.3rem;
+        transition: all 0.5s; }
+        #project .summary a i:hover {
+          color: #fcf1b3; }
   #project .preview {
     background: url("../images/ScreenShot.jpg") no-repeat;
     background-size: 75% 75%;

@@ -30,7 +30,8 @@
         <li><a href="#block-a">About</a></li>
         <li><a href="#block-c">Map</a></li>
         <li>
-          <a href="https://www.grecowebdev.com/projects">Projects</a>
+          <!-- <a href="https://www.grecowebdev.com/projects">Projects</a> -->
+          <a href="#block-b">Projects</a>
         </li>
       </ul>
     </nav>
@@ -75,86 +76,53 @@
       <div class="container">
         <div class="summary">
           <h1>Seth Greco &nbsp;&nbsp;- &nbsp;&nbsp;Software Engineer</h1>
-          &nbsp;A graduate from the Univerisity of Texas at San Antonio in comp sci, Seth is currently working as a software engineer at a Fortunate 100 company in the financial and insurance sector.  He has help spearhead the effort for the CFO sector of the company in moving to the cloud by laying the ground work and developing backend web services in Jboss / Springboot in which data is migrated off in-house servers to new cloud providers.  In his spare time he likes to learn, reasearch and build side full-stack and other web related projects.
-          &nbsp; Always looking for more, current experience and breath of knowledge encompasses Java, Springboot, Jboss, Python, Djano, Javascript, Django, Html5/Css3, MongoDB, OracleSQL and API development/consumption
+          &nbsp;A graduate from the Univerisity of Texas at San Antonio in comp sci, Seth is currently working as a software engineer at a Fortunate 100 company in the financial and insurance sector.  During his tenure he has helped develop the ground work for moving in-house application data to cloud, developing Jboss/Springboot web services for internal pathways.  In his spare time Seth enjoys a variety of hobbies including hiking/backpacking, photography, and guitar as well as learning, reasearching and building webdev projects.  Always looking for more, current experience and breath of knowledge encompasses Java, Python, Javascript, Html5/Css3, MongoDB and API development/consumption.
           &nbsp;
-          &nbsp;
-          <p>
-          In his spare time Seth enjoys hiking, landscape photography, playing guitar, giving private music lessons, staying active and working on his old car.
-          </p> 
-
           </div>
         </div>  
       <div id="bar-below"></div> 
     </section>
 
-    
-    <!-- Proficiency
     <section id="block-b" class="text-center">
       <div class="title-box">
-        <h2 class="header-b">Proficiency</h2>
+        <h2 class="header-b">Projects</h2>
         <div id="underline"></div>
-      </div>
-      <div class="container">
-        <div class="item">
-          <div class="image-content">
-            <i class="fab fa-python fa-2x"></i>
-          </div>
-          <div class="text-content">
-            <div class="mastery-bar python"><h4>Python</h4>
-          </div>
-          <h4 class="percent">75%</h4>
-        </div>
-        </div>
-        <div class="item">
-          <div class="image-content">
-            <i class="fab fa-java fa-2x"></i>
-          </div>
-          <div class="text-content">
-            <div class="mastery-bar java"><h4>Java</h4></div>
-            <h4 class="percent">85%</h4>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image-content dbl">
-            <i class="fab fa-css3-alt fa-2x"></i>
-            <i class="fab fa-html5 fa-2x"></i>
-          </div>
-          <div class="text-content">
-            <div class="mastery-bar html"><h4>HTML5 / CSS3</h4></div>
-            <h4 class="percent">80%</h4>
-          </div> 
-        </div>
-        <div class="item">
-          <div class="image-content">
-            <i class="fab fa-js fa-2x"></i>
-          </div>
-          <div class="text-content">
-            <div class="mastery-bar javascript"><h4>Javascript</h4></div>
-            <h4 class="percent">65%</h4>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image-content">
-            <i class="fab fa-react fa-2x"></i>
-          </div>
-          <div class="text-content">
-            <div class="mastery-bar react"><h4>React</h4></div>
-            <h4 class="percent">55%</h4>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image-content">
-            <i class="fab fa-node-js fa-2x"></i>
-          </div>
-          <div class="text-content">
-            <div class="mastery-bar node"><h4>Nodejs</h4></div>
-            <h4 class="percent">50%</h4>
-          </div>
+        <div id="pagination">
+          <ol class="circle-display">
+            <li><a id="project-selector-1" class="active"></a></li>
+            <li><a id="project-selector-2" class=""></a></li>
+          </ol>
+          <button id="page-forward">>></button>
         </div>
       </div>
+      <div id="project">
+        <div class="summary">
+          <h1 id="project-header">React-Photo-Gallery</h1>
+          <p id="project-summary">
+            This is a React application and my first React application I have
+            really completed to get a better understanding. I used mostly
+            funcational components and hooks to complete this. Utlizing the Flickr
+            API I call photos from my landscape photography based on state.
+            Interacting with a USA SVG map to get the state photos I have
+            accumlated. Other tech used in this is my own webpack and babel
+            configurations. I compiled down the code to host it in the codebase of
+            the portfolio page. essentially taking the entire React
+            project and turning into a single file.
+          </p>
+          <h3 id="project-tech">Tech-Stack: React, Sass, Webpack/Babel</h3>
+          <br />
+          <a id="project-github"
+            href="https://github.com/SethGreco/React-Photo-Gallery"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
+          <button id="demo">
+            <a id="project-link" href="https://grecowebdev.com/gallery"> Demo</a>
+          </button>
+        </div>
       <div id="bar-below"></div> 
-    </section> -->
+    </section>
 
     <!-- Vistor Locations & Map Markers  -->
     <section id="block-c">
@@ -167,8 +135,7 @@
         <div class="left-side-text">
           <p class="vistor-text">
             Vistors welcome!<br />
-            Feel free to leave me your coordinates by pressing the button to add
-            a marker for the map. <br />
+            Feel free to mark your location on the map by submitting your coordinates.<br />
             Don't worry I am not taking any other information from you.
           </p>
           <div id="React"></div>
@@ -218,6 +185,7 @@
     ></script>
     <!-- Local JS Files -->
     <script src="js/location.js" type="text/babel"></script>
+    <script src="js/pagination.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/map.js"></script>
     <!-- Gmap API key -->

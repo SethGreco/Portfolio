@@ -195,75 +195,112 @@ ul {
 
     #underline {
       height: 2px;
-      width: 17.5%;
+      width: 12.5%;
       background-color: $gold;
       display: block;
       border-radius: 5px;
       margin-bottom: 2rem;
     }
+
+    #pagination {
+      min-height: 1.6rem;
+      .circle-display {
+        clear: both;
+        width: 75px;
+        margin: 5px 0 0 2rem;
+        padding: 0;
+        li {
+          align-items: center;
+          list-style: none;
+          float: left;
+          margin: 7.5% 6px 0 6px;
+
+          a {
+            display: block;
+            width: 8px;
+            height: 8px;
+            text-indent: -10000px;
+            background: $gold;
+            border-radius: 10px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+          }
+
+          a.active {
+            background: $forest-green;
+          }
+        }
+      }
+      #page-forward {
+        margin: 0 0 0 10px;
+        color: $gold;
+        border: unset;
+        background-color: transparent;
+      }
+
+      #page-forward:hover {
+        width: 1.25rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+  #project {
+    .summary {
+      text-align: center;
+      min-height: 340px;
+      padding-bottom: 5%;
+      h1 {
+        font-family: "Source Sans Pro", sans-serif;
+        color: $water;
+        padding: 1.5% 0 1.5% 0;
+        font-size: 2rem;
+      }
+      p {
+        font-family: "Lato", sans-serif;
+        line-height: 1.6rem;
+        font-size: 1rem;
+        color: $cream;
+        padding: 1% 20% 2.5% 20%;
+      }
+      h3 {
+        color: $gold;
+      }
+      a {
+        text-align: center;
+
+        i {
+          color: #fff;
+          margin-right: 1rem;
+          border: 1px #fff transparent;
+
+          line-height: 25px;
+          padding: 0.3rem;
+          transition: all 0.5s;
+
+          &:hover {
+            color: $cream;
+          }
+        }
+      }
+      #demo {
+        background: transparent;
+        border: unset;
+        #project-link {
+          color: #2f9d2f;
+          font-size: 1.1rem;
+          font-weight: bold;
+        }
+      }
+      #demo:hover {
+        #project-link {
+          text-decoration: underline;
+        }
+      }
+    }
   }
   .container {
     padding: 2.5% 10% 10% 10%;
     background-color: transparent;
-
-    .item {
-      opacity: 1;
-      display: flex;
-      flex-direction: row;
-      padding: 1.25% 0 1.25% 0;
-      .image-content {
-        width: 12.5%;
-        i {
-          color: $gold;
-        }
-      }
-      .text-content {
-        width: 100%;
-        background-color: rgba(182, 206, 182, 0.2);
-        height: 65%;
-        margin-top: 1%;
-        display: flex;
-        flex-direction: row;
-        border-radius: 5px;
-
-        .percent {
-          color: $cream;
-        }
-        h4 {
-          padding-left: 1rem;
-          font-family: "Lato", sans-serif;
-          color: $cream;
-        }
-        .mastery-bar {
-          height: 65%;
-          border-radius: 5px;
-        }
-        .python {
-          width: 75%;
-          background-color: #356a35;
-        }
-        .java {
-          width: 85%;
-          background-color: #356a35;
-        }
-        .html {
-          width: 80%;
-          background-color: #356a35;
-        }
-        .javascript {
-          width: 65%;
-          background-color: #356a35;
-        }
-        .react {
-          width: 55%;
-          background-color: #356a35;
-        }
-        .node {
-          width: 50%;
-          background-color: #356a35;
-        }
-      }
-    }
   }
 }
 
